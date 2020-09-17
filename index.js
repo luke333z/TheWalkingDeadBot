@@ -57,9 +57,6 @@ client.on('message', message =>{
     if(command === 'bite'){
         client.commands.get("bite").execute(message, args);
     }
-    if(command === 'moderator'){
-        client.commands.get("moderator").execute(message, args);
-    }
     
     
 });
