@@ -57,7 +57,9 @@ client.on('message', message =>{
     if(command === 'bite'){
         client.commands.get("bite").execute(message, args);
     }
-    
+    if(command === 'avatar'){
+        client.commands.get("avatar").execute(message, args);
+    }
     
 });
 
