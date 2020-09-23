@@ -25,6 +25,7 @@ module.exports = {
                 .setDescription( `${user.tag} was successfully banned. ` )
                 .addField('Reason:', `${reason}`)
                 .addField('Moderator:', `${message.author.tag}`)
+                .setImage('https://cdn.discordapp.com/attachments/705049194682908782/758245013947285514/rcik_ban.gif')
                 .setTimestamp()
                 .setFooter("> luke.#0003")
                     message.channel.send(banEmbed);
