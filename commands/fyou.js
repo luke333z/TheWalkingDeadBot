@@ -10,19 +10,17 @@ module.exports = {
             return Math.floor(Math.random() * (max - min)) + min;
         }
         var url1;
-        var random = getRandomInt(0,6);
+        var random = getRandomInt(0,5);
         if(random == 0){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754034081137950770/giphy_1.gif";
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/758237314371158046/tara_gif.gif";
         }else if(random == 1){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754041251518611516/tumblr_on3i5vB9jt1tp82kso1_250.gif";
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/758236730015875092/giphy_19.gif";
         }else if(random == 2){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754041493399797841/tumblr_njq5zogPZe1t2lmpwo1_400.gif"
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/758236871888601098/tenor_2.gif"
         }else if(random == 3){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754041731124691044/tenor.gif"
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/758237032337768468/tenor_3.gif"
         }else if(random == 4){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754042148097359912/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f.gif"
-        }else if(random == 5){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754042356742881462/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f.gif"
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/758237088918405130/tenor_4.gif"
         }
         
         const purrson = message.mentions.users.first(10);
