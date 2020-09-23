@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 
 module.exports = {
-    name: 'cry',
-    description: "cry",
+    name: 'fyou',
+    description: "fucks you",
     execute(message, args){
         function getRandomInt(min, max) {
             min = Math.ceil(min);
@@ -27,24 +27,24 @@ module.exports = {
         
         const purrson = message.mentions.users.first(10);
         if(!purrson || message.author.id == purrson.id){
-            const cryEmbed = new Discord.MessageEmbed()
-            .setColor('#0000cc')
-            .setDescription( `<@${message.author.id}>` + ' cries.' )
+            const fyouEmbed = new Discord.MessageEmbed()
+            .setColor('#00cccc')
+            .setDescription( `<@${message.author.id}>` + ' insults themselves? huh' )
             .setImage(URL=url1)
             .setTimestamp()
             .setFooter("> luke.#0003")
     
-            message.channel.send(cryEmbed);
+            message.channel.send(fyouEmbed);
         } else {
         
         
-        const someonemademesadEmbed = new Discord.MessageEmbed()
-            .setColor('#0000cc')
-            .setDescription(`${purrson}` + ' made ' + `<@${message.author.id}>` + ' sad. ' )
+        const fuEmbed = new Discord.MessageEmbed()
+            .setColor('#00cccc')
+            .setDescription(`<@${message.author.id}>` + ' insults ' + `${purrson}` + '. ' )
             .setImage(URL=url1)
             .setTimestamp()
             .setFooter("> luke.#0003")
-            message.channel.send(someonemademesadEmbed);
+            message.channel.send(fuEmbed);
     
     }
 }

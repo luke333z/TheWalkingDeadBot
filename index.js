@@ -29,7 +29,7 @@ client.on('message', message =>{
 
     let args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
-
+    if (!message.guild) return;
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
     } 
@@ -60,6 +60,20 @@ client.on('message', message =>{
     if(command === 'avatar'){
         client.commands.get("avatar").execute(message, args);
     }
+    if(command === 'fyou' || command === 'insult' ){
+        client.commands.get("fyou").execute(message, args);
+    }
+    if(command === 'coinflip'){
+        client.commands.get("coinflip").execute(message, args);
+    }
+    if(command === 'kick'){
+        client.commands.get("kick").execute(message, args);
+    }
+    if(command === 'ban'){
+        client.commands.get("ban").execute(message, args);
+    }
+   
+    
     
 });
 

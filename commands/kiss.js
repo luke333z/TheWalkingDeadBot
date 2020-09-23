@@ -21,7 +21,7 @@ module.exports = {
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754035410937577513/tumblr_nxk4qpRctB1uaie3ho1_500.gif"
         }
         
-        const purrson = message.mentions.users.first();
+        const purrson = message.mentions.users.first(10);
         if(!purrson || message.author.id == purrson.id){
             const kissUrselfEmbed = new Discord.MessageEmbed()
             .setColor('#ff0808')

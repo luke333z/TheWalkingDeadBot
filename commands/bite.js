@@ -21,7 +21,7 @@ module.exports = {
             url1 = ""
         }
         
-        const purrson = message.mentions.users.first();
+        const purrson = message.mentions.users.first(10);
         if(!purrson || message.author.id == purrson.id){
             const authorbitEmbed = new Discord.MessageEmbed()
             .setColor('#ff6600')
