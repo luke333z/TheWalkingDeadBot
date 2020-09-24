@@ -9,6 +9,10 @@ module.exports = {
         if(!message.member.hasPermission("BAN_MEMBERS")){
             message.channel.send("You don't have permission to ban.")
         }else{
+         if(user){
+            const member = message.guild.member(user);
+        
+        if(member){
             if(!reason){
                 const bannoreasEmbed = new Discord.MessageEmbed()
                 .setColor('#ff00cd')
@@ -16,10 +20,10 @@ module.exports = {
                 .setTimestamp()
                 .setFooter("> luke.#0003")
                     message.channel.send(bannoreasEmbed);
-                }else if(user){
-            const member = message.guild.member(user);
-        
-        if(member){
+                }else{
+
+
+
             member
             .ban({
                 reason: reason,
@@ -41,6 +45,7 @@ module.exports = {
               message.channel.send('I was unable to ban the member');
               console.error(err);
             });
+        }
         }else{
             const bannoEmbed = new Discord.MessageEmbed()
             .setColor('#ff00cd')
