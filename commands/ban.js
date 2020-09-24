@@ -9,7 +9,14 @@ module.exports = {
         if(!message.member.hasPermission("BAN_MEMBERS")){
             message.channel.send("You don't have permission to ban.")
         }else{
-        if(user){
+            if(!reason){
+                const bannoreasEmbed = new Discord.MessageEmbed()
+                .setColor('#ff00cd')
+                .setDescription( `Please insert a reason. ` )
+                .setTimestamp()
+                .setFooter("> luke.#0003")
+                    message.channel.send(bannoreasEmbed);
+                }else if(user){
             const member = message.guild.member(user);
         
         if(member){
