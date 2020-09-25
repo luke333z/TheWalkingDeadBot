@@ -1,14 +1,9 @@
 const Discord = require('discord.js');
-const Keyv = require('keyv');
-
-const keyv = new Keyv('sqlite://path/to/database.sqlite');
-
 const client = new Discord.Client();
 
-const prefixes = new Keyv('sqlite://path/to.sqlite');
-const globalPrefix = '-';
+var prefix = '-'
 const fs = require('fs');
-keyv.on('error', err => console.error('Keyv connection error:', err));
+
 client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -21,31 +16,20 @@ for(const file of commandFiles){
 
 client.once('ready', () => {
     console.log('TWDBot is online!');
+    client.user.setActivity("The Walking Dead", {type: "PLAYING"});
+    client.user.setStatus("idle");
     client.user.setUsername("TheWalkingDeadBot")
     client.user.setActivity('The Walking Dead', {type: 'WATCHING'}).catch(console.error);
 });
 
-client.on('message', async message =>{
-    if(message.author.bot) return;
-    let args;
-    if(message.guild){
-        let prefix;
-
-        if(message.content.startsWith(globalPrefix)){
-            prefix= globalPrefix;
-        }else{
-            const guildPrefix = await prefixes.get(message.guild.id);
-            if(message.content.startsWith(guildPrefix)) prefix = guildPrefix;
-        }
+client.on('message', message =>{
     
-    //de aici
-    if(!prefix) return;
-    args = message.content.slice(prefix.length).trim().split(/\s+/);
 
-    }else return;
+    if(!message.content.startsWith(prefix) || message.author.bot) return;
 
+    let args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
-  
+    if (!message.guild) return;
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
     } 
@@ -88,16 +72,9 @@ client.on('message', async message =>{
     if(command === 'ban'){
         client.commands.get("ban").execute(message, args);
     }
-    if(command === 'prefix'){
-        client.commands.get("prefix").execute(message, args);
-    }
    
     
     
 });
 
 client.login(process.env.token);
-
-
-//"NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.NAMour6hWLcjz5JVWbyjgWm-dl0"
-//process.env.token
