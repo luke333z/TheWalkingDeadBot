@@ -88,6 +88,9 @@ client.on('message', async message =>{
     if(command === 'ban'){
         client.commands.get("ban").execute(message, args);
     }
+    if(command === 'prefix'){
+        client.commands.get("prefix").execute(message, args);
+    }
    
     
     
