@@ -10,7 +10,7 @@ module.exports = {
             return Math.floor(Math.random() * (max - min)) + min;
         }
         var url1;
-        var random = getRandomInt(0,4);
+        var random = getRandomInt(0,5);
         if(random == 0){
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/758237314371158046/tara_gif.gif";
         }else if(random == 1){
@@ -19,6 +19,8 @@ module.exports = {
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/758237032337768468/tenor_3.gif"
         }else if(random == 3){
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/758237088918405130/tenor_4.gif"
+        }else if(random == 4){
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/758247813032181780/tenor_6.gif"
         }
         
         const purrson = message.mentions.users.first(10);

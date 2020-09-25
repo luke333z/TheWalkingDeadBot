@@ -10,15 +10,13 @@ module.exports = {
             return Math.floor(Math.random() * (max - min)) + min;
         }
         var url1;
-        var random = getRandomInt(0,4);
+        var random = getRandomInt(0,3);
         if(random == 0){
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754700612649877634/TWD_1002_JD_0708_0604_RT-1024x650.jpg";
         }else if(random == 1){
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754703252205076480/unknown.png";
         }else if(random == 2){
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754704053006630972/unknown.png"
-        }else if(random == 3){
-            url1 = ""
         }
         
         const purrson = message.mentions.users.first(10);
