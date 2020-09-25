@@ -10,7 +10,7 @@ module.exports = {
         .setAuthor(user.tag)
         .setImage(user.displayAvatarURL({size: 2048, dynamic: true}))
         .setTimestamp()
-        .setFooter("> luke.#0003");
+        .setFooter("> luke.#8235");
         message.channel.send(avatarEmbed);
     }
 }

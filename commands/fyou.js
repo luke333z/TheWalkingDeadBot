@@ -30,7 +30,7 @@ module.exports = {
             .setDescription( `<@${message.author.id}>` + ' insults themselves? huh' )
             .setImage(URL=url1)
             .setTimestamp()
-            .setFooter("> luke.#0003")
+            .setFooter("> luke.#8235")
     
             message.channel.send(fyouEmbed);
         } else {
@@ -41,7 +41,7 @@ module.exports = {
             .setDescription(`<@${message.author.id}>` + ' insults ' + `${purrson}` + '. ' )
             .setImage(URL=url1)
             .setTimestamp()
-            .setFooter("> luke.#0003")
+            .setFooter("> luke.#8235")
             message.channel.send(fuEmbed);
     
     }

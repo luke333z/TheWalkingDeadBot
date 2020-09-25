@@ -10,7 +10,7 @@ module.exports = {
         .setTitle('🏓 Pong!')
         .addField( `${message.author.username}` + `'s ping is:`, ping)
         .setTimestamp()
-        .setFooter("> luke.#0003")
+        .setFooter("> luke.#8235")
 
         message.channel.send(pingEmbed);
     }

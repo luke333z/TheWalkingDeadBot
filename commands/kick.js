@@ -35,7 +35,7 @@ module.exports = {
             .setColor('#ff00cd')
             .setDescription( `This user isn't in this server. ` )
             .setTimestamp()
-            .setFooter("> luke.#0003")
+            .setFooter("> luke.#8235")
                 message.channel.send(kicknoEmbed);
             }
         }else{
@@ -44,7 +44,7 @@ module.exports = {
             .setTitle("-kick [member] [reason]")
             .setDescription( `Kicks a mamber.` )
             .setTimestamp()
-            .setFooter("> luke.#0003")
+            .setFooter("> luke.#8235")
                 message.channel.send(kickhelpEmbed);
         }
 

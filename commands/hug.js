@@ -30,7 +30,7 @@ module.exports = {
             .setDescription( `<@${message.author.id}>` + ' _hugs_.' )
             .setImage(URL=url1)
             .setTimestamp()
-            .setFooter("> luke.#0003")
+            .setFooter("> luke.#8235")
     
             message.channel.send(hugsEmbed);
         } else {
@@ -41,7 +41,7 @@ module.exports = {
             .setDescription( `<@${message.author.id}>` + ' hugs ' + `${purrson}` + '. 🥺' )
             .setImage(URL=url1)
             .setTimestamp()
-            .setFooter("> luke.#0003")
+            .setFooter("> luke.#8235")
             message.channel.send(hugEmbed);
     
     }

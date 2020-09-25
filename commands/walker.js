@@ -46,7 +46,7 @@ module.exports = {
         .setDescription(mesajembed)
         .setImage(gifembed)
         .setTimestamp()
-        .setFooter("> luke.#0003")
+        .setFooter("> luke.#8235")
 
 
         message.channel.send(walkerEmbed);

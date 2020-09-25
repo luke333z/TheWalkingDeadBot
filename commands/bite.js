@@ -26,7 +26,7 @@ module.exports = {
             .setDescription('Oh no, ' + `<@${message.author.id}>` + ' was bit! ' + 'Get help fast!' )
             .setImage(URL=url1)
             .setTimestamp()
-            .setFooter("> luke.#0003")
+            .setFooter("> luke.#8235")
     
             message.channel.send(authorbitEmbed);
         } else {
@@ -37,7 +37,7 @@ module.exports = {
             .setDescription('Oh no, ' + `${purrson}` + ' was bit! ' + 'Get help fast!' )
             .setImage(URL=url1)
             .setTimestamp()
-            .setFooter("> luke.#0003")
+            .setFooter("> luke.#8235")
             message.channel.send(bitEmbed);
     
     }

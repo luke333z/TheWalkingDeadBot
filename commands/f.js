@@ -8,7 +8,7 @@ module.exports = {
         .setColor('#000000')
         .setDescription(`${message.author.username}` + ` has paid their respects.`)
         .setTimestamp()
-        .setFooter("> luke.#0003")
+        .setFooter("> luke.#8235")
         message.channel.send(fEmbed);
     }
 }

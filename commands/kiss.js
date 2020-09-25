@@ -28,7 +28,7 @@ module.exports = {
             .setDescription( `<@${message.author.id}>` + ' kissing yourself?! ' + 'So lonely.' )
             .setImage(URL=url1)
             .setTimestamp()
-            .setFooter("> luke.#0003")
+            .setFooter("> luke.#8235")
     
             message.channel.send(kissUrselfEmbed);
         } else {
@@ -39,7 +39,7 @@ module.exports = {
             .setDescription('Awww! ' + `<@${message.author.id}>` + ' kisses ' + `${purrson}` + '. They are so cute togheter!' )
             .setImage(URL=url1)
             .setTimestamp()
-            .setFooter("> luke.#0003")
+            .setFooter("> luke.#8235")
             message.channel.send(kissEmbed);
     
     }

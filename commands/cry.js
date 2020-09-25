@@ -32,7 +32,7 @@ module.exports = {
             .setDescription( `<@${message.author.id}>` + ' cries.' )
             .setImage(URL=url1)
             .setTimestamp()
-            .setFooter("> luke.#0003")
+            .setFooter("> luke.#8235")
     
             message.channel.send(cryEmbed);
         } else {
@@ -43,7 +43,7 @@ module.exports = {
             .setDescription(`${purrson}` + ' made ' + `<@${message.author.id}>` + ' sad. ' )
             .setImage(URL=url1)
             .setTimestamp()
-            .setFooter("> luke.#0003")
+            .setFooter("> luke.#8235")
             message.channel.send(someonemademesadEmbed);
     
     }
