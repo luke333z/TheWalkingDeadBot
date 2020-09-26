@@ -60,8 +60,8 @@ client.on('message', message =>{
     if(command === 'avatar'){
         client.commands.get("avatar").execute(message, args);
     }
-    if(command === 'fyou' || command === 'insult' ){
-        client.commands.get("fyou").execute(message, args);
+    if(command === 'insult' ){
+        client.commands.get("insult").execute(message, args);
     }
     if(command === 'coinflip'){
         client.commands.get("coinflip").execute(message, args);

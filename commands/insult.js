@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports = {
-    name: 'fyou',
+    name: 'insult',
     description: "fucks you",
     execute(message, args){
         function getRandomInt(min, max) {
