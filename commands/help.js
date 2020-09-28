@@ -22,11 +22,11 @@ module.exports = {
 
 
         if(args[0] === "f"){
-            const f = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-f`", "Pay your respects.").setFooter("> luke.#8235"); 
+            const f = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-f`", "Pay your respects.").setFooter("> luke.#8235 •"); 
             message.channel.send(f);
         }
         if(args[0] === "coinflip"){
-            const coinflip = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-coinflip`", "Heads or tails.").setFooter("> luke.#8235");
+            const coinflip = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-coinflip`", "Heads or tails.").setFooter("> luke.#8235 •");
             message.channel.send(coinflip);
         }
         if(args[0] === "say"){
@@ -34,7 +34,8 @@ module.exports = {
             message.channel.send(say);
         }
         if(args[0] === "shrug"){
-            
+            const shrug = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-shrug`", "¯\_(ツ)_/¯").setFooter("> luke.#8235 •");
+            message.channel.send(say);
         }
         if(args[0] === "ping"){
             
