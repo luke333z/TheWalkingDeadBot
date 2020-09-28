@@ -75,12 +75,26 @@ client.on('message', message =>{
     if(command === 'say'){
         client.commands.get("say").execute(message, args);
     }
-   
+    if(command === 'shrug'){
+        client.commands.get("shrug").execute(message, args);
+    }
+    if(command === 'purge'){
+        client.commands.get("purge").execute(message, args);
+    }
+    if(command === 'fistbump'){
+        client.commands.get("fistbump").execute(message, args);
+    }
+    if(command === 'userinfo'){
+        client.commands.get("userinfo").execute(message, args);
+    }
+    if(command === 'random'){
+        client.commands.get("random").execute(message, args);
+    }   
     
     
 });
 
-client.login(process.env.token);
+client.login("NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.NAMour6hWLcjz5JVWbyjgWm-dl0" );
 
 
 //process.env.token

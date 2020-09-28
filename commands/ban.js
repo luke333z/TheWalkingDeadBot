@@ -57,10 +57,9 @@ module.exports = {
         }else{
             const banhelpEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")
-            .setTitle("-ban [member] [reason]")
+            .setTitle("-ban (member) (reason)")
             .setDescription( `Bans a mamber.` )
-            .setTimestamp()
-            .setFooter("> luke.#8235")
+            .setFooter("> luke.#8235 • ()-required arguments, []-optional arguments");
                 message.channel.send(banhelpEmbed);
         }
 
