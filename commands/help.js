@@ -4,23 +4,6 @@ module.exports = {
     name: 'help',
     description: "Help command",
     execute(message, args){
-            const helpEmbed = new Discord.MessageEmbed()
-            .setTitle("Hello!")
-            .setColor("RANDOM")
-            .setDescription("Below you can see all the things I'm programmed to do.\n If you need any more help send a message to @luke.#8235.")
-            .addField("__**COMMANDS**__", "\u200b")
-            .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`")
-            .addField("**MODERATION**", "`ban`, `kick`, `purge`")
-            .addField("**GIFS**", "`kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`")
-            .addField("**UTIL**", "`avatar`, `userinfo`")
-            .addField("**Use `-help <Commmand>` for more information about a command.**", "**Example:** \n`-help avatar` for more info about the avatar command.")
-            .addField("Useful links:", "[Invite Me](https://discord.com/api/oauth2/authorize?client_id=748105665301708883&permissions=8&scope=bot), [The Walking Dead Server](https://discord.gg/ndvbjpZ)")
-            .setTimestamp()
-            .setFooter("> luke.#8235");
-        message.channel.send(helpEmbed);
-
-
-
         if(args[0] === "f"){
             const f = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-f`", "Pay your respects.").setFooter("> luke.#8235 •"); 
             message.channel.send(f);
@@ -96,6 +79,22 @@ module.exports = {
         if(args[0] === "random"){
             const random = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-random [number]`", "A random number.").setFooter("> luke.#8235 • ()-required arguments, []-optional arguments");
             message.channel.send(random);
+        }
+        else{
+            const helpEmbed = new Discord.MessageEmbed()
+            .setTitle("Hello!")
+            .setColor("RANDOM")
+            .setDescription("Below you can see all the things I'm programmed to do.\n If you need any more help send a message to @luke.#8235.")
+            .addField("__**COMMANDS**__", "\u200b")
+            .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`")
+            .addField("**MODERATION**", "`ban`, `kick`, `purge`")
+            .addField("**GIFS**", "`kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`")
+            .addField("**UTIL**", "`avatar`, `userinfo`")
+            .addField("**Use `-help <Commmand>` for more information about a command.**", "**Example:** \n`-help avatar` for more info about the avatar command.")
+            .addField("Useful links:", "[Invite Me](https://discord.com/api/oauth2/authorize?client_id=748105665301708883&permissions=8&scope=bot), [The Walking Dead Server](https://discord.gg/ndvbjpZ)")
+            .setTimestamp()
+            .setFooter("> luke.#8235");
+        message.channel.send(helpEmbed);
         }
     }
 }
