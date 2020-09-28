@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
     name: 'f',
-    description: "pay your respects",
+    description: "Pay your respects.",
     execute(message, args){
         const fEmbed = new Discord.MessageEmbed()
         .setColor('#000000')
