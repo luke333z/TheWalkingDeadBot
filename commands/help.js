@@ -22,13 +22,16 @@ module.exports = {
 
 
         if(args[0] === "f"){
-            const f = new Discord.MessageEmbed().addField("**Usage:** `-f`", "Pay your respects.").setFooter("> luke.#8235");
+            const f = new Discord.MessageEmbed().addField("**Usage:** `-f`", "Pay your respects.").setFooter("> luke.#8235"); 
+            message.channel.send(f);
         }
         if(args[0] === "coinflip"){
             const coinflip = new Discord.MessageEmbed().addField("**Usage:** `-coinflip`", "Heads or tails.").setFooter("> luke.#8235");
+            message.channel.send(coinflip);
         }
         if(args[0] === "say"){
             const say = new Discord.MessageEmbed().addField("**Usage:** `-say (text)`", "Make me say something.").setFooter("> luke.#8235 • ()-required arguments, []-optional arguments");
+            message.channel.send(say);
         }
         if(args[0] === "shrug"){
             
