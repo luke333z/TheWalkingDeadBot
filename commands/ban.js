@@ -15,7 +15,7 @@ module.exports = {
         if(member){
             if(!reason){
                 const bannoreasEmbed = new Discord.MessageEmbed()
-                .setColor('#ff00cd')
+                .setColor("RANDOM")
                 .setDescription( `Please insert a reason. ` )
                 .setTimestamp()
                 .setFooter("> luke.#8235")
@@ -32,7 +32,7 @@ module.exports = {
             .then(() => {
               
                 const banEmbed = new Discord.MessageEmbed()
-                .setColor('#ff00cd')
+                .setColor("RANDOM")
                 .setDescription( `${user.tag} was successfully banned. ` )
                 .addField('Reason:', `${reason}`)
                 .addField('Moderator:', `${message.author.tag}`)
@@ -48,7 +48,7 @@ module.exports = {
         }
         }else{
             const bannoEmbed = new Discord.MessageEmbed()
-            .setColor('#ff00cd')
+            .setColor("RANDOM")
             .setDescription( `This user isn't in this server. ` )
             .setTimestamp()
             .setFooter("> luke.#8235")
@@ -56,7 +56,7 @@ module.exports = {
             }
         }else{
             const banhelpEmbed = new Discord.MessageEmbed()
-            .setColor('#ff00cd')
+            .setColor("RANDOM")
             .setTitle("-ban [member] [reason]")
             .setDescription( `Bans a mamber.` )
             .setTimestamp()

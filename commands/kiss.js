@@ -24,7 +24,7 @@ module.exports = {
         const purrson = message.mentions.users.first(10);
         if(!purrson || message.author.id == purrson.id){
             const kissUrselfEmbed = new Discord.MessageEmbed()
-            .setColor('#ff0808')
+            .setColor("RANDOM")
             .setDescription( `<@${message.author.id}>` + ' kissing yourself?! ' + 'So lonely.' )
             .setImage(URL=url1)
             .setTimestamp()
@@ -35,7 +35,7 @@ module.exports = {
         
         
         const kissEmbed = new Discord.MessageEmbed()
-            .setColor('#ff0808')
+            .setColor("RANDOM")
             .setDescription('Awww! ' + `<@${message.author.id}>` + ' kisses ' + `${purrson}` + '. They are so cute togheter!' )
             .setImage(URL=url1)
             .setTimestamp()

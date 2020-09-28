@@ -26,7 +26,7 @@ module.exports = {
         const purrson = message.mentions.users.first(10);
         if(!purrson || message.author.id == purrson.id){
             const fyouEmbed = new Discord.MessageEmbed()
-            .setColor('#00cccc')
+            .setColor("RANDOM")
             .setDescription( `<@${message.author.id}>` + ' insults themselves? huh' )
             .setImage(URL=url1)
             .setTimestamp()
@@ -37,7 +37,7 @@ module.exports = {
         
         
         const fuEmbed = new Discord.MessageEmbed()
-            .setColor('#00cccc')
+            .setColor("RANDOM")
             .setDescription(`<@${message.author.id}>` + ' insults ' + `${purrson}` + '. ' )
             .setImage(URL=url1)
             .setTimestamp()

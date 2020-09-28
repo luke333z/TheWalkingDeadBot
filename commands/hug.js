@@ -26,7 +26,7 @@ module.exports = {
         const purrson = message.mentions.users.first(10);
         if(!purrson || message.author.id == purrson.id){
             const hugsEmbed = new Discord.MessageEmbed()
-            .setColor('#33cc33')
+            .setColor("RANDOM")
             .setDescription( `<@${message.author.id}>` + ' _hugs_.' )
             .setImage(URL=url1)
             .setTimestamp()
@@ -37,7 +37,7 @@ module.exports = {
         
         
         const hugEmbed = new Discord.MessageEmbed()
-            .setColor('#33cc33')
+            .setColor("RANDOM")
             .setDescription( `<@${message.author.id}>` + ' hugs ' + `${purrson}` + '. 🥺' )
             .setImage(URL=url1)
             .setTimestamp()

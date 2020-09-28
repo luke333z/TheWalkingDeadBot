@@ -22,7 +22,7 @@ module.exports = {
         const purrson = message.mentions.users.first(10);
         if(!purrson || message.author.id == purrson.id){
             const authorbitEmbed = new Discord.MessageEmbed()
-            .setColor('#ff6600')
+            .setColor("RANDOM")
             .setDescription('Oh no, ' + `<@${message.author.id}>` + ' was bit! ' + 'Get help fast!' )
             .setImage(URL=url1)
             .setTimestamp()
@@ -33,7 +33,7 @@ module.exports = {
         
         
         const bitEmbed = new Discord.MessageEmbed()
-            .setColor('#ff6600')
+            .setColor("RANDOM")
             .setDescription('Oh no, ' + `${purrson}` + ' was bit! ' + 'Get help fast!' )
             .setImage(URL=url1)
             .setTimestamp()

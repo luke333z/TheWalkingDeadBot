@@ -6,7 +6,7 @@ module.exports = {
     execute(message, args){
             const helpEmbed = new Discord.MessageEmbed()
             .setTitle("Hello!")
-            .setColor(`#ffff00`)
+            .setColor("RANDOM")
             .setDescription("Below you can see all the things I'm programmed to do.\n If you need any more help send a message to @luke.#8235.")
             .addField("__**COMMANDS**__", "\u200b")
             .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`")
@@ -22,15 +22,15 @@ module.exports = {
 
 
         if(args[0] === "f"){
-            const f = new Discord.MessageEmbed().addField("**Usage:** `-f`", "Pay your respects.").setFooter("> luke.#8235"); 
+            const f = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-f`", "Pay your respects.").setFooter("> luke.#8235"); 
             message.channel.send(f);
         }
         if(args[0] === "coinflip"){
-            const coinflip = new Discord.MessageEmbed().addField("**Usage:** `-coinflip`", "Heads or tails.").setFooter("> luke.#8235");
+            const coinflip = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-coinflip`", "Heads or tails.").setFooter("> luke.#8235");
             message.channel.send(coinflip);
         }
         if(args[0] === "say"){
-            const say = new Discord.MessageEmbed().addField("**Usage:** `-say (text)`", "Make me say something.").setFooter("> luke.#8235 • ()-required arguments, []-optional arguments");
+            const say = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-say (text)`", "Make me say something.").setFooter("> luke.#8235 • ()-required arguments, []-optional arguments");
             message.channel.send(say);
         }
         if(args[0] === "shrug"){

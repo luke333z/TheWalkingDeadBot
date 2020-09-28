@@ -18,7 +18,7 @@ module.exports = {
             .then(() => {
               
                 const kickEmbed = new Discord.MessageEmbed()
-                .setColor('#ff00cd')
+                .setColor("RANDOM")
                 .setDescription( `${user.tag} was successfully kicked. ` )
                 .addField('Reason:', `${reason}`)
                 .addField('Moderator:', `${message.author.tag}`)
@@ -32,7 +32,7 @@ module.exports = {
             });
         }else{
             const kicknoEmbed = new Discord.MessageEmbed()
-            .setColor('#ff00cd')
+            .setColor("RANDOM")
             .setDescription( `This user isn't in this server. ` )
             .setTimestamp()
             .setFooter("> luke.#8235")
@@ -40,7 +40,7 @@ module.exports = {
             }
         }else{
             const kickhelpEmbed = new Discord.MessageEmbed()
-            .setColor('#ff00cd')
+            .setColor("RANDOM")
             .setTitle("-kick [member] [reason]")
             .setDescription( `Kicks a mamber.` )
             .setTimestamp()

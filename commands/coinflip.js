@@ -14,7 +14,7 @@ module.exports = {
        
         if(random == 0 ){
             const tailsEmbed = new Discord.MessageEmbed()
-            .setColor('#ff00cd')
+            .setColor("RANDOM")
             .setDescription( `Tails!` )
             .setTimestamp()
             .setFooter("> luke.#8235")
@@ -23,7 +23,7 @@ module.exports = {
         } else if(random == 1){
     
         const headsEmbed = new Discord.MessageEmbed()
-        .setColor('#ff00cd')
+        .setColor("RANDOM")
         .setDescription( `Heads!` )
         .setTimestamp()
         .setFooter("> luke.#8235")

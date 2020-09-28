@@ -6,7 +6,7 @@ module.exports = {
     execute(message, args){
         var ping = Date.now() -  message.createdTimestamp + " ms";
         const pingEmbed = new Discord.MessageEmbed()
-        .setColor('#ff0808')
+        .setColor("RANDOM")
         .setTitle('🏓 Pong!')
         .addField( `${message.author.username}` + `'s ping is:`, ping)
         .setTimestamp()

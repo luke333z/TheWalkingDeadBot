@@ -5,7 +5,7 @@ module.exports = {
     description: "Pay your respects.",
     execute(message, args){
         const fEmbed = new Discord.MessageEmbed()
-        .setColor('#000000')
+        .setColor("RANDOM")
         .setDescription(`${message.author.username}` + ` has paid their respects.`)
         .setTimestamp()
         .setFooter("> luke.#8235")

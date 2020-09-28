@@ -6,7 +6,7 @@ module.exports = {
     execute(message, args){
         const user = message.mentions.users.first() || message.author;
         const avatarEmbed = new Discord.MessageEmbed()
-        .setColor('#00ffff')
+        .setColor("RANDOM")
         .setAuthor(user.tag)
         .setImage(user.displayAvatarURL({size: 2048, dynamic: true}))
         .setTimestamp()

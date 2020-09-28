@@ -42,7 +42,7 @@ module.exports = {
         }
 
         const walkerEmbed = new Discord.MessageEmbed()
-        .setColor('#00ffff')
+        .setColor("RANDOM")
         .setDescription(mesajembed)
         .setImage(gifembed)
         .setTimestamp()
