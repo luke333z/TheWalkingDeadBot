@@ -81,7 +81,7 @@ module.exports = {
             message.channel.send(random);
         }
         if(args[0] === "prefix"){
-            const prefix = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-prefix [NewPrefix]`", "Sets a new prefix.").setFooter("> luke.#8235 • ()-required arguments, []-optional arguments");
+            const prefix = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-prefix [set] [NewPrefix]`", "Sets a new prefix.").setFooter("> luke.#8235 • ()-required arguments, []-optional arguments");
             message.channel.send(prefix);
         }else if(!args[0]){
             const helpEmbed = new Discord.MessageEmbed()

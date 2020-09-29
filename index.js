@@ -40,9 +40,12 @@ client.on('message', message =>{
             db.set(`guild_${message.guild.id}_prefix`, args[0]);
             const prefixset = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix set!**').setDescription(`Your new prefix is ${args[0]}`).setTimestamp().setFooter("> luke.#8235");
             return message.channel.send(prefixset)
-        }else{
+        }else if(!args[0]){
             const noargs = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix**').setDescription(`Your prefix is ${prefix}`).setTimestamp().setFooter("> luke.#8235");
             return message.channel.send(noargs);
+        }else{
+            const prefix1 = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-prefix [set] [NewPrefix]`", "Sets a new prefix.").setFooter("> luke.#8235 • ()-required arguments, []-optional arguments");
+            message.channel.send(prefix1);
         }
       
        
