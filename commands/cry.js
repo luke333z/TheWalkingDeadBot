@@ -25,7 +25,7 @@ module.exports = {
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754042356742881462/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f.gif"
         }
         
-        const purrson = message.mentions.users.first(10);
+        const purrson = message.mentions.users.first();
         if(!purrson || message.author.id == purrson.id){
             const cryEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")
