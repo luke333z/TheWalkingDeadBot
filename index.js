@@ -36,13 +36,16 @@ client.on('message', message =>{
         if(args[0] === 'set'){
             if(!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send(`You don't have permission to do this!`);
             if(args[1] === prefix) return message.channel.send('This is already your prefix.');
-            if(args[0] === '-') db.delete(`guild_${message.guild.id}_prefix`);
-            db.set(`guild_${message.guild.id}_prefix`, args[0]);
-            const prefixset = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix set!**').setDescription(`Your new prefix is ${args[0]}`).setTimestamp().setFooter("> luke.#8235");
+            if(args[1] === '-') db.delete(`guild_${message.guild.id}_prefix`);
+            db.set(`guild_${message.guild.id}_prefix`, args[1]);
+            const prefixset = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix set!**').setDescription(`Your new prefix is ${args[1]}`).setTimestamp().setFooter("> luke.#8235");
             return message.channel.send(prefixset)
         }else if(!args[0]){
             const noargs = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix**').setDescription(`Your prefix is ${prefix}`).setTimestamp().setFooter("> luke.#8235");
             return message.channel.send(noargs);
+        }else{
+            const prefix1 = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-prefix [set] [NewPrefix]`", "Sets a new prefix.").setFooter("> luke.#8235 • ()-required arguments, []-optional arguments");
+            message.channel.send(prefix1);
         }
 }
     if(command === 'ping'){
@@ -112,6 +115,6 @@ client.on('message', message =>{
     
 });
 
-client.login(process.env.token);
+client.login("NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.NAMour6hWLcjz5JVWbyjgWm-dl0");
 
 
