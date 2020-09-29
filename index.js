@@ -25,7 +25,7 @@ client.once('ready', () => {
 client.on('message', message =>{
     
 
-    const prefix = db.get(`guild_${message.guild.id}_prefix`) || '-';
+    const prefix =  '-';
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
     let args = message.content.slice(prefix.length).split(/ +/);
