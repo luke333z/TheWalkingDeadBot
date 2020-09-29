@@ -21,27 +21,23 @@ module.exports = {
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754035410937577513/tumblr_nxk4qpRctB1uaie3ho1_500.gif"
         }
         
-        const purrson = message.mentions.users.first(10);
-        if(!purrson || message.author.id == purrson.id){
-            const kissUrselfEmbed = new Discord.MessageEmbed()
-            .setColor("RANDOM")
-            .setDescription( `<@${message.author.id}>` + ' kissing yourself?! ' + 'So lonely.' )
-            .setImage(URL=url1)
-            .setTimestamp()
-            .setFooter("> luke.#8235")
-    
-            message.channel.send(kissUrselfEmbed);
-        } else {
-        
-        
-        const kissEmbed = new Discord.MessageEmbed()
-            .setColor("RANDOM")
-            .setDescription('Awww! ' + `<@${message.author.id}>` + ' kisses ' + `${purrson}` + '. They are so cute togheter!' )
-            .setImage(URL=url1)
-            .setTimestamp()
-            .setFooter("> luke.#8235")
-            message.channel.send(kissEmbed);
-    
-    }
+        const purrson = message.mentions.users.first(); 
+if(!purrson || message.author.id == purrson.id){ 
+    const kissUrselfEmbed = new Discord.MessageEmbed() 
+    .setColor("RANDOM")
+    .setDescription( `<@${message.author.id}>` + ' kissing yourself?! ' + 'So lonely.' )
+    .setImage(URL=url1)
+    .setTimestamp()
+    .setFooter("> luke.#8235") 
+    message.channel.send(kissUrselfEmbed); 
+}else{
+    const kissEmbed = new Discord.MessageEmbed() 
+    .setColor("RANDOM") 
+    .setDescription('Awww! ' + `<@${message.author.id}>` + ' kisses ' + `${purrson}` + '. They are so cute togheter!' )
+    .setImage(URL=url1)
+    .setTimestamp() 
+    .setFooter("> luke.#8235") 
+    message.channel.send(kissEmbed); 
+}
 }
 }
