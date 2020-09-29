@@ -15,7 +15,7 @@ module.exports = {
             url1 = "";
         }
         
-        const purrson = message.mentions.users.first(10);
+        const purrson = message.mentions.users.first();
         if(!purrson || message.author.id == purrson.id){
             const fistEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")
