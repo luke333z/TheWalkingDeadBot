@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const db = require('quick.db');
 
-var prefix = '-'
 const fs = require('fs');
 
 client.commands = new Discord.Collection();
@@ -25,11 +25,28 @@ client.once('ready', () => {
 client.on('message', message =>{
     
 
+    const prefix = db.get(`guild_${message.guild.id}_prefix`) || '-';
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
     let args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     if (!message.guild) return;
+    if(command === 'prefix'){
+       if(!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send(`You don't have permission to do this!`);
+       if(!args[0]){
+           const noargs = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix**').setDescription(`Your prefix is ${prefix}`).setTimestamp().setFooter("> luke.#8235");
+           return message.channel.send(noargs);
+       }
+       if(args[0] === prefix) return message.channel.send('This is already your prefix.')
+       if(args[0] === '-') db.delete(`guild_${message.guild.id}_prefix`)
+       db.set(`guild_${message.guild.id}_prefix`, args[0]);
+       const prefixset = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix set!**').setDescription(`Your new prefix is ${args[0]}`).setTimestamp().setFooter("> luke.#8235");
+          
+       return message.channel.send(prefixset)
+    } 
+    if(command === 'ping'){
+        client.commands.get('ping').execute(message, args);
+    } 
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
     } 
