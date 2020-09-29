@@ -80,6 +80,10 @@ module.exports = {
             const random = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-random [number]`", "A random number.").setFooter("> luke.#8235 • ()-required arguments, []-optional arguments");
             message.channel.send(random);
         }
+        if(args[0] === "prefix"){
+            const prefix = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-prefix [NewPrefix]`", "Sets a new prefix.").setFooter("> luke.#8235 • ()-required arguments, []-optional arguments");
+            message.channel.send(prefix);
+        }
         else{
             const helpEmbed = new Discord.MessageEmbed()
             .setTitle("Hello!")
@@ -89,7 +93,7 @@ module.exports = {
             .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`")
             .addField("**MODERATION**", "`ban`, `kick`, `purge`")
             .addField("**GIFS**", "`kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`")
-            .addField("**UTIL**", "`avatar`, `userinfo`")
+            .addField("**UTIL**", "`avatar`, `userinfo`, `prefix`")
             .addField("**Use `-help <Commmand>` for more information about a command.**", "**Example:** \n`-help avatar` for more info about the avatar command.")
             .addField("Useful links:", "[Invite Me](https://discord.com/api/oauth2/authorize?client_id=748105665301708883&permissions=8&scope=bot), [The Walking Dead Server](https://discord.gg/ndvbjpZ)")
             .setTimestamp()
