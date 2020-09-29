@@ -32,17 +32,24 @@ client.on('message', message =>{
     const command = args.shift().toLowerCase();
     if (!message.guild) return;
     if(command === 'prefix'){
-       if(!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send(`You don't have permission to do this!`);
-       if(!args[0]){
-           const noargs = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix**').setDescription(`Your prefix is ${prefix}`).setTimestamp().setFooter("> luke.#8235");
-           return message.channel.send(noargs);
-       }
-       if(args[0] === prefix) return message.channel.send('This is already your prefix.')
-       if(args[0] === '-') db.delete(`guild_${message.guild.id}_prefix`)
-       db.set(`guild_${message.guild.id}_prefix`, args[0]);
-       const prefixset = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix set!**').setDescription(`Your new prefix is ${args[0]}`).setTimestamp().setFooter("> luke.#8235");
+        
+        if(args[0] === 'set'){
+            if(!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send(`You don't have permission to do this!`);
+            if(args[1] === prefix) return message.channel.send('This is already your prefix.');
+            if(args[0] === '-') db.delete(`guild_${message.guild.id}_prefix`);
+            db.set(`guild_${message.guild.id}_prefix`, args[0]);
+            const prefixset = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix set!**').setDescription(`Your new prefix is ${args[0]}`).setTimestamp().setFooter("> luke.#8235");
+            return message.channel.send(prefixset)
+        }else{
+            const noargs = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix**').setDescription(`Your prefix is ${prefix}`).setTimestamp().setFooter("> luke.#8235");
+            return message.channel.send(noargs);
+        }
+      
+       
+     
+       
           
-       return message.channel.send(prefixset)
+       
     } 
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
