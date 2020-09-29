@@ -19,7 +19,7 @@ module.exports = {
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754704053006630972/unknown.png"
         }
         
-        const purrson = message.mentions.users.first(10);
+        const purrson = message.mentions.users.first();
         if(!purrson || message.author.id == purrson.id){
             const authorbitEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")
