@@ -23,7 +23,7 @@ module.exports = {
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/758247813032181780/tenor_6.gif"
         }
         
-        const purrson = message.mentions.users.first(10);
+        const purrson = message.mentions.users.first();
         if(!purrson || message.author.id == purrson.id){
             const fyouEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")
