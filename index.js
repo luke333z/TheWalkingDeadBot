@@ -43,16 +43,10 @@ client.on('message', message =>{
         }else if(!args[0]){
             const noargs = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix**').setDescription(`Your prefix is ${prefix}`).setTimestamp().setFooter("> luke.#8235");
             return message.channel.send(noargs);
+        }
         }else{
             const prefix1 = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-prefix [set] [NewPrefix]`", "Sets a new prefix.").setFooter("> luke.#8235 • ()-required arguments, []-optional arguments");
             message.channel.send(prefix1);
-        }
-      
-       
-     
-       
-          
-       
     } 
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
