@@ -29,7 +29,7 @@ module.exports = {
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267803623620718/giphy_14.gif";
         }
         
-        const purrson = message.mentions.users.first(10);
+        const purrson = message.mentions.users.first();
         if(!purrson || message.author.id == purrson.id){
             const laughEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")
