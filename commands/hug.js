@@ -23,7 +23,7 @@ module.exports = {
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754040224182435880/tumblr_7c2d66743f5a3a66a3d2501abbaa4b5b_e913933b_500.gif";
         }
         
-        const purrson = message.mentions[10].users.first();
+        const purrson = message.mentions[10]        
         if(!purrson || message.author.id == purrson.id){
             const hugsEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")
