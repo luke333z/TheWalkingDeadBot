@@ -51,9 +51,6 @@ client.on('message', message =>{
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
     } 
-    if(command === 'ping'){
-        client.commands.get('ping').execute(message, args);
-    } 
     if(command === 'f'){
         client.commands.get('f').execute(message, args);
     }
