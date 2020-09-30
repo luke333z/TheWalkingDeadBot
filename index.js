@@ -115,6 +115,6 @@ client.on('message', message =>{
     
 });
 
-client.login("NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.NAMour6hWLcjz5JVWbyjgWm-dl0");
+client.login(process.env.token);
 
 
