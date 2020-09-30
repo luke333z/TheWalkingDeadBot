@@ -78,7 +78,7 @@ client.on('message', message =>{
     if(command === 'avatar'){
         client.commands.get("avatar").execute(message, args);
     }
-    if(command === 'insult' ){
+    if(command === 'insult' || command === 'fyou'){
         client.commands.get("insult").execute(message, args);
     }
     if(command === 'coinflip'){

@@ -27,7 +27,7 @@ module.exports = {
         if(!purrson || message.author.id == purrson.id){
             const hugsEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")
-            .setDescription( `<@${message.author.id}>` + ' _hugs_.' )
+            .setDescription( `<@${message.author.id}>` + ' Hugging yourself?! So lonely....' )
             .setImage(URL=url1)
             .setTimestamp()
             .setFooter("> luke.#8235")

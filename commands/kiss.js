@@ -25,7 +25,7 @@ module.exports = {
 if(!purrson || message.author.id == purrson.id){ 
     const kissUrselfEmbed = new Discord.MessageEmbed() 
     .setColor("RANDOM")
-    .setDescription( `<@${message.author.id}>` + ' kissing yourself?! ' + 'So lonely.' )
+    .setDescription( `<@${message.author.id}>` + ' Kissing yourself?! ' + 'So lonely.' )
     .setImage(URL=url1)
     .setTimestamp()
     .setFooter("> luke.#8235") 
