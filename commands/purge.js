@@ -13,8 +13,12 @@ module.exports = {
         if (isNaN(amount)) {
             return;
         }else if(args[0]<= 100){
-                message.channel.bulkDelete(amount);
-                message.channel.send('Deleted `' + `${amount}` + '` messages')
+            message.channel.bulkDelete(1);
+            message.channel.bulkDelete(amount);
+            message.channel.send('Deleted `' + `${amount}` + '` messages')
+            setTimeout(function(){ 
+                message.channel.bulkDelete(1);
+            }, 3000);
             }else{
                 message.channel.send("I can't delete more than `100` messages")
             }
