@@ -1,8 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
+require('dotenv').config()
 
 const fs = require('fs');
+const { executionAsyncId } = require('async_hooks');
 
 client.commands = new Discord.Collection();
 
@@ -16,8 +18,6 @@ for(const file of commandFiles){
 
 client.once('ready', () => {
     console.log('TWDBot is online!');
-    client.user.setActivity("The Walking Dead", {type: "PLAYING"});
-    client.user.setStatus("idle");
     client.user.setUsername("TheWalkingDeadBot")
     client.user.setActivity('The Walking Dead', {type: 'WATCHING'}).catch(console.error);
 });
@@ -31,6 +31,9 @@ client.on('message', message =>{
     let args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     if (!message.guild) return;
+    if(command === 'ticket'){
+        client.commands.get('ticket').execute(message, args);
+    }
     if(command === 'prefix'){
         
         if(args[0] === 'set'){
@@ -38,13 +41,13 @@ client.on('message', message =>{
             if(args[1] === prefix) return message.channel.send('This is already your prefix.');
             if(args[1] === '-') db.delete(`guild_${message.guild.id}_prefix`);
             db.set(`guild_${message.guild.id}_prefix`, args[1]);
-            const prefixset = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix set!**').setDescription(`Your new prefix is ${args[1]}`).setTimestamp().setFooter("> luke.#8235");
+            const prefixset = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix set!**').setDescription(`Your new prefix is ${args[1]}`).setTimestamp().setFooter(process.env.DEVELOPER);
             return message.channel.send(prefixset)
         }else if(!args[0]){
-            const noargs = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix**').setDescription(`Your prefix is ${prefix}`).setTimestamp().setFooter("> luke.#8235");
+            const noargs = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix**').setDescription(`Your prefix is ${prefix}`).setTimestamp().setFooter(process.env.DEVELOPER);
             return message.channel.send(noargs);
         }else{
-            const prefix1 = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-prefix [set] [NewPrefix]`", "Sets a new prefix.").setFooter("> luke.#8235 • ()-required arguments, []-optional arguments");
+            const prefix1 = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-prefix [set] [NewPrefix]`", "Sets a new prefix.").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
             message.channel.send(prefix1);
         }
 }
@@ -112,6 +115,6 @@ client.on('message', message =>{
     
 });
 
-client.login("NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.NAMour6hWLcjz5JVWbyjgWm-dl0");
+client.login(process.env.TOKEN);
 
 

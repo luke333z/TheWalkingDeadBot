@@ -22,7 +22,7 @@ module.exports = {
             .setDescription( `<@${message.author.id}>` + ' fistbumps.' )
             .setImage(URL=url1)
             .setTimestamp()
-            .setFooter("> luke.#8235")
+            .setFooter(process.env.DEVELOPER)
     
             message.channel.send(fistEmbed);
         } else {
@@ -33,7 +33,7 @@ module.exports = {
             .setDescription( `<@${message.author.id}>` + ' fistbumps ' + `${purrson}` )
             .setImage(URL=url1)
             .setTimestamp()
-            .setFooter("> luke.#8235")
+            .setFooter(process.env.DEVELOPER)
             message.channel.send(fistbumpEmbed);
     
     }

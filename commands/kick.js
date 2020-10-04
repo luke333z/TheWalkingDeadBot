@@ -23,7 +23,7 @@ module.exports = {
                 .addField('Reason:', `${reason}`)
                 .addField('Moderator:', `${message.author.tag}`)
                 .setTimestamp()
-                .setFooter("> luke.#0003")
+                .setFooter(process.env.DEVELOPER)
                     message.channel.send(kickEmbed);
             })
             .catch(err => {
@@ -35,7 +35,7 @@ module.exports = {
             .setColor("RANDOM")
             .setDescription( `This user isn't in this server. ` )
             .setTimestamp()
-            .setFooter("> luke.#8235")
+            .setFooter(process.env.DEVELOPER)
                 message.channel.send(kicknoEmbed);
             }
         }else{
@@ -43,7 +43,7 @@ module.exports = {
             .setColor("RANDOM")
             .setTitle("-kick (member) (reason)")
             .setDescription( `Kicks a mamber.` )
-            .setFooter("> luke.#8235 • ()-required arguments, []-optional arguments");
+            .setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
                 message.channel.send(kickhelpEmbed);
         }
 

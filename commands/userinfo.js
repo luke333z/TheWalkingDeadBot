@@ -17,7 +17,7 @@ module.exports = {
             .addField('**Playing**', `N/A`, true)
             .addField('**Mention**', `<@${user.id}>`, true)
             .setTimestamp()
-            .setFooter("> luke.#8235");
+            .setFooter(process.env.DEVELOPER);
             message.channel.send(infoaEmbed);
         
     }else if(!play.toString().startsWith('n')){
@@ -31,7 +31,7 @@ module.exports = {
         .addField('**Playing**', `${play}`, true)
         .addField('**Mention**', `<@${user.id}>`, true)
         .setTimestamp()
-        .setFooter("> luke.#8235");
+        .setFooter(process.env.DEVELOPER);
         message.channel.send(infoEmbed);
        
     }

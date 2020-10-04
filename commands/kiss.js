@@ -28,7 +28,7 @@ if(!purrson || message.author.id == purrson.id){
     .setDescription( `<@${message.author.id}>` + ' Kissing yourself?! ' + 'So lonely.' )
     .setImage(URL=url1)
     .setTimestamp()
-    .setFooter("> luke.#8235") 
+    .setFooter(process.env.DEVELOPER) 
     message.channel.send(kissUrselfEmbed); 
 }else{
     const kissEmbed = new Discord.MessageEmbed() 
@@ -36,7 +36,7 @@ if(!purrson || message.author.id == purrson.id){
     .setDescription('Awww! ' + `<@${message.author.id}>` + ' kisses ' + `${purrson}` + '. They are so cute togheter!' )
     .setImage(URL=url1)
     .setTimestamp() 
-    .setFooter("> luke.#8235") 
+    .setFooter(process.env.DEVELOPER) 
     message.channel.send(kissEmbed); 
 }
 }
