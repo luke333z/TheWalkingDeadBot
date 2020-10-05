@@ -17,7 +17,7 @@ module.exports = {
             .setColor("RANDOM")
             .setDescription( `Tails!` )
             .setTimestamp()
-            .setFooter("> luke.#8235")
+            .setFooter(process.env.DEVELOPER)
     
             message.channel.send(tailsEmbed);
         } else if(random == 1){
@@ -26,7 +26,7 @@ module.exports = {
         .setColor("RANDOM")
         .setDescription( `Heads!` )
         .setTimestamp()
-        .setFooter("> luke.#8235")
+        .setFooter(process.env.DEVELOPER)
             message.channel.send(headsEmbed);
     
     }

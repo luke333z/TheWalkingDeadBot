@@ -18,7 +18,7 @@ module.exports = {
                 .setColor("RANDOM")
                 .setDescription( `Please insert a reason. ` )
                 .setTimestamp()
-                .setFooter("> luke.#8235")
+                .setFooter(process.env.DEVELOPER)
                     message.channel.send(bannoreasEmbed);
                 }else{
 
@@ -38,7 +38,7 @@ module.exports = {
                 .addField('Moderator:', `${message.author.tag}`)
                 .setImage('https://cdn.discordapp.com/attachments/705049194682908782/758245013947285514/rcik_ban.gif')
                 .setTimestamp()
-                .setFooter("> luke.#8235")
+                .setFooter(process.env.DEVELOPER)
                     message.channel.send(banEmbed);
             })
             .catch(err => {
@@ -51,7 +51,7 @@ module.exports = {
             .setColor("RANDOM")
             .setDescription( `This user isn't in this server. ` )
             .setTimestamp()
-            .setFooter("> luke.#8235")
+            .setFooter(process.env.DEVELOPER)
                 message.channel.send(bannoEmbed);
             }
         }else{
@@ -59,7 +59,7 @@ module.exports = {
             .setColor("RANDOM")
             .setTitle("-ban (member) (reason)")
             .setDescription( `Bans a mamber.` )
-            .setFooter("> luke.#8235 • ()-required arguments, []-optional arguments");
+            .setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
                 message.channel.send(banhelpEmbed);
         }
 
