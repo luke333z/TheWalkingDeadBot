@@ -10,7 +10,7 @@ module.exports = {
             message.channel.send(say);
         }
         else{
-        message.channel.bulkDelete(1);
+        message.delete();
         message.channel.send(msg);
     }
 }

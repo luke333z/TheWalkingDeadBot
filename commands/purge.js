@@ -14,11 +14,14 @@ module.exports = {
             return;
         }
         if(amount <=  100){
+            
+        message.delete();
             message.channel.bulkDelete(amount);
             return;
             
         }else{
             
+        message.delete();
             while(amount >99){
               
                 message.channel.bulkDelete(100).catch(console.error);;

@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
 require('dotenv').config()
-
+client.login(process.env.TOKEN);
 const fs = require('fs');
 const { executionAsyncId } = require('async_hooks');
 
@@ -115,6 +115,10 @@ client.on('message', message =>{
     
 });
 
-client.login(process.env.TOKEN);
+
+
+
+
+
 
 
