@@ -16,6 +16,7 @@ module.exports = {
             .addField('**Status**', `${message.guild.members.cache.get(user.id).presence.status}`, true)
             .addField('**Playing**', `N/A`, true)
             .addField('**Mention**', `<@${user.id}>`, true)
+            .addField('**Created at**', `${user.createdAt}`, true)
             .setTimestamp()
             .setFooter(process.env.DEVELOPER);
             message.channel.send(infoaEmbed);
