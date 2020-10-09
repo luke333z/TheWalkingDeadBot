@@ -20,7 +20,7 @@ module.exports = {
             .setFooter(process.env.DEVELOPER);
             message.channel.send(infoaEmbed);
         
-    }else if(!play.toString().startsWith('n')){
+    }else{
         const infoEmbed = new Discord.MessageEmbed()
         .setColor("RANDOM")
         .setAuthor(user.tag, user.displayAvatarURL({size: 2048, dynamic: true}))
