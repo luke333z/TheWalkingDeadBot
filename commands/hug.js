@@ -12,9 +12,9 @@ module.exports = {
         var url1;
         var random = getRandomInt(0,5);
         if(random == 0){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754039810246574170/tumblr_49d5cbf6c2de3ee3f36a95147ff9f6f8_1b38a19d_500.gif";
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754039810246574170/tumblr_49d5cbf6c2de3ee3f36a95147ff9f6f8_1b38a19d_500.gif";//darul karul
         }else if(random == 1){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754034147021946961/giphy_2.gif";
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754034147021946961/giphy_2.gif";//
         }else if(random == 2){
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754034233827393606/giphy_3.gif";
         }else if(random == 3){

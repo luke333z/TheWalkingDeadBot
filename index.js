@@ -2,7 +2,9 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
 require('dotenv').config()
-client.login(process.env.token);
+client.login("NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g");
+//"NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g"
+//process.env.token
 const fs = require('fs');
 const { executionAsyncId } = require('async_hooks');
 
@@ -31,8 +33,8 @@ client.on('message', message =>{
     let args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     if (!message.guild) return;
-    if(command === 'ticket'){
-        client.commands.get('ticket').execute(message, args);
+    if(command === 'botinfo'){
+        client.commands.get('botinfo').execute(message, args);
     }
     if(command === 'prefix'){
         
@@ -51,6 +53,12 @@ client.on('message', message =>{
             message.channel.send(prefix1);
         }
 }
+
+
+   
+    if(command === 'createpoll'){
+        client.commands.get('createpoll').execute(message, args);
+    }
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
     } 
