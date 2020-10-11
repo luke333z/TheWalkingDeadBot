@@ -32,10 +32,6 @@ module.exports = {
             const ban = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-ban (member) (reason)`", "Bans someone.").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
             message.channel.send(ban);
         }
-        if(args[0] === "purge"){
-            const purge = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-purge (number)`", "Deletes messages.").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
-            message.channel.send(purge);
-        }
         if(args[0] === "kiss"){
             const kiss = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-kiss [member]`", "Kisses someone.").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
             message.channel.send(kiss);
@@ -83,6 +79,18 @@ module.exports = {
         if(args[0] === "prefix"){
             const prefix = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-prefix [set] [NewPrefix]`", "Sets a new prefix.").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
             message.channel.send(prefix);
+        }
+            if(args[0] === "serverinfo"){
+                const serverinfo = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-serverinfo`", "Server information.").setFooter(`${process.env.DEVELOPER} •`);
+                message.channel.send(serverinfo);
+            } 
+            if(args[0] === "botinfo"){
+                const serverinfo = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-botinfo`", "Bot information.").setFooter(`${process.env.DEVELOPER} •`);
+                message.channel.send(serverinfo);
+            }
+             if(args[0] === "createpoll"){
+                const random = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-createpoll (Question)`", "Creates a poll in the channel you typed this command.").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
+                message.channel.send(random);
         }else if(!args[0]){
             const helpEmbed = new Discord.MessageEmbed()
             .setTitle("Hello!")
@@ -90,9 +98,9 @@ module.exports = {
             .setDescription("Below you can see all the things I'm programmed to do.\n If you need any more help send a message to @luke.#8235.")
             .addField("__**COMMANDS**__", "\u200b")
             .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`")
-            .addField("**MODERATION**", "`ban`, `kick`, `purge`")
+            .addField("**MODERATION**", "`ban`, `kick`")
             .addField("**GIFS**", "`kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`")
-            .addField("**UTIL**", "`avatar`, `userinfo`, `prefix`")
+            .addField("**UTIL**", "`avatar`, `userinfo`, `prefix`, `serverinfo`, `createpoll`, `botinfo`")
             .addField("**Use `-help <Commmand>` for more information about a command.**", "**Example:** \n`-help avatar` for more info about the avatar command.")
             .addField("Useful links:", "[Invite Me](https://discord.com/api/oauth2/authorize?client_id=748105665301708883&permissions=8&scope=bot), [The Walking Dead Server](https://discord.gg/pqckK8q)")
             .setTimestamp()

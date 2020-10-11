@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
 require('dotenv').config()
-client.login(process.env.token);
+client.login("NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g");
 //"NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g"
 //process.env.token
 const fs = require('fs');
@@ -109,9 +109,6 @@ client.on('message', message =>{
     }
     if(command === 'shrug'){
         client.commands.get("shrug").execute(message, args);
-    }
-    if(command === 'purge'){
-        client.commands.get("purge").execute(message, args);
     }
     if(command === 'fistbump'){
         client.commands.get("fistbump").execute(message, args);
