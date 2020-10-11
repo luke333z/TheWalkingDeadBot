@@ -26,10 +26,10 @@ module.exports = {
             
         message.delete();
             while(amount >99){
-              
+                setTimeout(function(){ 
                 message.channel.bulkDelete(100).catch(console.error);;
                 amount=amount-100;
-                
+            }, 300);
             }
             if(amount == 0) return;
             message.channel.bulkDelete(amount).catch(console.error);;
