@@ -5,6 +5,9 @@ module.exports = {
     description: "Deletes messages.",
     execute(message, args){
         let amount = parseInt(args[0]);
+        if(!message.member.hasPermission("MANAGE_MESSAGES")){
+            return message.channel.send("You don't have permission to delete messages.");
+        }
         if(!args[0]){
             const purge = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-purge (number)`", "Deletes messages.").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
             message.channel.send(purge);
