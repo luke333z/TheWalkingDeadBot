@@ -36,6 +36,9 @@ client.on('message', message =>{
     if(command === 'botinfo'){
         client.commands.get('botinfo').execute(message, args);
     }
+    if(command === 'serverinfo'){
+        client.commands.get('serverinfo').execute(message, args);
+    }
     if(command === 'prefix'){
         
         if(args[0] === 'set'){

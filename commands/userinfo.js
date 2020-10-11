@@ -18,8 +18,8 @@ module.exports = {
             .addField('**Status**', `${message.guild.member(user).presence.status}`, true)
             .addField('**Playing**', `N/A`, true)
             .addField('**Mention**', `<@${user.id}>`, true)
-            .addField('**Created at**', `${user.createdAt}`, true)
-            .addField('**Joined at**', `${message.guild.member(user).joinedAt}`, true)
+            .addField('**Created on**', `${user.createdAt}`, true)
+            .addField('**Joined on**', `${message.guild.member(user).joinedAt}`, true)
             .addField('**Roles**', `${message.guild.member(user).roles.cache.map(r => r.name)}`, true)
 
             .setTimestamp()
@@ -36,8 +36,8 @@ module.exports = {
         .addField('**Status**', `${message.guild.member(user).presence.status}`, true)
         .addField('**Playing**', `${play}`, true)
         .addField('**Mention**', `<@${user.id}>`, true)
-        .addField('**Created at**', `${user.createdAt}`, true) 
-        .addField('**Joined at**', `${message.guild.member(user).joinedAt}`, true)
+        .addField('**Created on**', `${user.createdAt}`, true) 
+        .addField('**Joined on**', `${message.guild.member(user).joinedAt}`, true)
         .addField('**Roles**', `${message.guild.member(user).roles.cache.map(r => r.name)}`, true)
         .setTimestamp()
         .setFooter(process.env.DEVELOPER);
