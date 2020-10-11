@@ -7,7 +7,7 @@ module.exports = {
       
         const user = message.mentions.users.first() || message.author;
         const play = message.guild.member(user).presence.activities;
-        console.log(message.guild.member(user).roles.cache.map(r => r.name))
+   
         if(play.toString()  === ''){
             const infoaEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")
