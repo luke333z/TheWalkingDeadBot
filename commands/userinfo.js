@@ -18,7 +18,6 @@ module.exports = {
             .addField('**Mention**', `<@${user.id}>`, true)
             .addField('**Created at**', `${user.createdAt}`, true)
             .addField('**Joined at**', `${message.guild.member(user).joinedAt}`, true)
-            .addField('**Roles**', `${message.guild.member(user).joinedAt}`, true)  
             .setTimestamp()
             .setFooter(process.env.DEVELOPER);
             message.channel.send(infoaEmbed);
