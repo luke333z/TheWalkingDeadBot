@@ -2,9 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
 require('dotenv').config()
-client.login("NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g");
-//"NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g"
-//process.env.token
+client.login(process.env.token);
+
 const fs = require('fs');
 const { executionAsyncId } = require('async_hooks');
 
@@ -33,9 +32,7 @@ client.on('message', message =>{
     let args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     if (!message.guild) return;
-    if(command === 'botinfo'){
-        client.commands.get('botinfo').execute(message, args);
-    }
+    
     if(command === 'serverinfo'){
         client.commands.get('serverinfo').execute(message, args);
     }
@@ -58,7 +55,9 @@ client.on('message', message =>{
 }
 
 
-   
+if(command === 'botinfo'){
+    client.commands.get('botinfo').execute(message, args, prefix);
+}
     if(command === 'createpoll'){
         client.commands.get('createpoll').execute(message, args);
     }
