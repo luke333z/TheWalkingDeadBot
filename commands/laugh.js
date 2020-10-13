@@ -12,21 +12,21 @@ module.exports = {
         var url1;
         var random = getRandomInt(0,8);
         if(random == 0){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754266827198038106/giphy_7.gif";//done
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754266827198038106/giphy_7.gif";//ricc haha
         }else if(random == 1){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267506931138570/giphy_8.gif";//done
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267506931138570/giphy_8.gif";//merle haha
         }else if(random == 2){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267546089291797/giphy_9.gif";//done
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267546089291797/giphy_9.gif";//negan haha
         }else if(random == 3){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267600359522384/giphy_10.gif";//done
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267600359522384/giphy_10.gif";//ricc smile
         }else if(random == 4){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267641325158491/giphy_11.gif";//done
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267641325158491/giphy_11.gif";//negan smile
         }else if(random == 5){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267705623969913/giphy_12.gif";
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267705623969913/giphy_12.gif";//darul ku o fata smile
         }else if(random == 6){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267756383174676/giphy_13.gif";
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267756383174676/giphy_13.gif";//ricc smile2
         }else if(random == 7){
-            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267803623620718/giphy_14.gif";
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267803623620718/giphy_14.gif";//lil ass kicker
         }
         
         const purrson = message.mentions.users.first();
