@@ -10,7 +10,7 @@ module.exports = {
             return Math.floor(Math.random() * (max - min)) + min;
         }
         var msg = getRandomInt(0, 20);//20 cazuri de la 0 la 19
-        var gif = getRandomInt(0, 6);
+        var gif = getRandomInt(0, 8);
         var mesajembed;
         if(msg <= 3){//4 din 20 sansa
             mesajembed = "Here's some biters."
@@ -23,7 +23,7 @@ module.exports = {
         }
         var gifembed;
         if(gif == 0){
-            gifembed = "https://cdn.discordapp.com/attachments/705049194682908782/754269504716013628/giphy_15.gif";
+            gifembed = "https://cdn.discordapp.com/attachments/705049194682908782/754269504716013628/giphy_15.gif";//2 nubz
         }
         if(gif == 1){
             gifembed = "https://cdn.discordapp.com/attachments/705049194682908782/754269535032311808/giphy_16.gif";//morgans wife
@@ -42,6 +42,9 @@ module.exports = {
         }
         if(gif == 6){
             gifembed = "https://cdn.discordapp.com/attachments/753567636968833103/763121371331952650/walkr.gif";//walkers start ricc cu kalu
+        }
+        if(gif == 7){
+            gifembed = "https://cdn.discordapp.com/attachments/753567636968833103/765593524178780180/baba_walker.gif";//baba walkr
         }
 
         const walkerEmbed = new Discord.MessageEmbed()

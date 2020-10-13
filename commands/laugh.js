@@ -10,7 +10,7 @@ module.exports = {
             return Math.floor(Math.random() * (max - min)) + min;
         }
         var url1;
-        var random = getRandomInt(0,8);
+        var random = getRandomInt(0,9);
         if(random == 0){
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754266827198038106/giphy_7.gif";//ricc haha
         }else if(random == 1){
@@ -27,6 +27,9 @@ module.exports = {
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267756383174676/giphy_13.gif";//ricc smile2
         }else if(random == 7){
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754267803623620718/giphy_14.gif";//lil ass kicker
+        }
+        else if(random == 8){
+            url1 = "https://cdn.discordapp.com/attachments/753567636968833103/765597937401069628/mishoun_smile.gif";//mishoun haha
         }
         
         const purrson = message.mentions.users.first();

@@ -10,7 +10,7 @@ module.exports = {
             return Math.floor(Math.random() * (max - min)) + min;
         }
         var url1;
-        var random = getRandomInt(0,7);
+        var random = getRandomInt(0,10);
         if(random == 0){
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754034081137950770/giphy_1.gif";//daryl cry
         }else if(random == 1){
@@ -25,6 +25,12 @@ module.exports = {
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/754042356742881462/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f.gif"//tara cry
         }else if(random == 6){
             url1 = "https://cdn.discordapp.com/attachments/753567636968833103/765481690725744700/oh_shnitzel.gif"//darul cway ezstreet cell
+        }else if(random == 7){
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/765589909862875147/megi_cry.gif"//megi kry
+        }else if(random == 8){
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/765589930742382592/megi_kry.gif"//megi cry
+        }else if(random == 9){
+            url1 = "https://cdn.discordapp.com/attachments/705049194682908782/765589917547233341/asta_planghe.gif"//pretena blonda a lu ricc cry
         }
         
         const purrson = message.mentions.users.first();
