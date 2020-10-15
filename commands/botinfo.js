@@ -15,7 +15,7 @@ module.exports = {
                 
                 .addField(`__**My developers:**__`, "Lead developer - luke.#8235\nDeveloper - TaraChambler13#0721")
                 .addField(`__**Special thanks to:**__`, "TheFlagen430297#2546\nnot_clipz#2874")
-                .setFooter("[Invite Me](https://discord.com/api/oauth2/authorize?client_id=748105665301708883&permissions=8&scope=bot), [The Walking Dead Server](https://discord.gg/pqckK8q)")
+                
                 .setTimestamp()
     
 
