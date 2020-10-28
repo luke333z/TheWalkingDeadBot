@@ -27,13 +27,16 @@ client.once('ready', () => {
 
 client.on('message', message =>{
     
-
+    if (message.author.bot) return  ;
     const prefix = db.get(`guild_${message.guild.id}_prefix`) || '-';
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
+    if(!message.content.startsWith(prefix)) return;
 
     let args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     if (!message.guild) return;
+  
+      
+       
     
     if(command === 'serverinfo'){
         client.commands.get('serverinfo').execute(message, args);
@@ -120,6 +123,29 @@ if(command === 'botinfo'){
     if(command === 'random'){
         client.commands.get("random").execute(message, args);
     }   
+    if(command === 'test'){
+        client.commands.get("looting").execute(message, args);
+    }   
+
+
+
+    if(message.guild.id === "745623527759282176"){
+            //spooptober
+            if(command === 'thespookindead'){
+                client.commands.get("thespookindead").execute(message, args);
+            }
+           
+
+
+
+
+
+
+
+
+
+
+    }
 
     
 });
