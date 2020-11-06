@@ -131,12 +131,17 @@ if(command === 'botinfo'){
 
     if(message.guild.id === "745623527759282176"){
             //spooptober
-            if(command === 'thespookindead'){
-                client.commands.get("thespookindead").execute(message, args);
-            }
+            //if(command === 'thespookindead'){
+          //     client.commands.get("thespookindead").execute(message, args);
+          //  }
            
 
-
+    if(command === 'softban'){
+        client.commands.get("softban").execute(message, args);
+    }  
+    if(command === 'unban'){
+        client.commands.get("unban").execute(message, args);
+    }   
 
 
 
