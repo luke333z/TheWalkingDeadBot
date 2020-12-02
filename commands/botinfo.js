@@ -14,7 +14,7 @@ module.exports = {
                 
                 
                 .addField(`__**My developers:**__`, "Lead developer - luke.#8235\nDeveloper - TaraChambler13#0721")
-                .addField(`__**Special thanks to:**__`, "TheFlagen430297#2546\nnot_clipz#2874")
+                .addField(`__**Special thanks to:**__`, "TheFlagen430297#2546\nshade_0x #2874")
                 
                 .setTimestamp()
     
