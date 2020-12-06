@@ -13,7 +13,7 @@ module.exports = {
                 .addField(`**Server prefix:**`, prefix, true)
                 
                 
-                .addField(`__**My developers:**__`, "Lead developer - luke.#8235\nDeveloper - TaraChambler13#0721")
+                .addField(`__**My developers:**__`, "Lead developer - luke.#0003\nDeveloper - TaraChambler13#0721")
                 .addField(`__**Special thanks to:**__`, "TheFlagen430297#2546\nshade_0x #2874")
                 
                 .setTimestamp()
