@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const simp = require("./simp");
 
 module.exports = {
     name: 'help',
@@ -15,6 +16,10 @@ module.exports = {
         if(args[0] === "say"){
             const say = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-say (text)`", "Make me say something.").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
             message.channel.send(say);
+        }
+        if(args[0] === "simp"){
+            const simp = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-simp (member)`", "🇸 🇮 🇲 🇵").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
+            message.channel.send(simp);
         }
         if(args[0] === "shrug"){
             const shrug = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-shrug`", "¯\\_(ツ)_/¯").setFooter(`${process.env.DEVELOPER} •`);
@@ -97,7 +102,7 @@ module.exports = {
             .setColor("RANDOM")
             .setDescription("Below you can see all the things I'm programmed to do.\n If you need any more help send a message to @luke.#8235.")
             .addField("__**COMMANDS**__", "\u200b")
-            .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`")
+            .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`")
             .addField("**MODERATION**", "`ban`, `kick`")
             .addField("**GIFS**", "`kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`")
             .addField("**UTIL**", "`avatar`, `userinfo`, `prefix`, `serverinfo`, `createpoll`, `botinfo`")

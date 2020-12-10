@@ -39,7 +39,9 @@ client.on('message', message =>{
     if(command === 'loot'){
         client.commands.get('loot').execute(message, args);
     }
-    
+    if(command === 'simp'){
+        client.commands.get('simp').execute(message, args);
+    }
     if(command === 'serverinfo'){
         client.commands.get('serverinfo').execute(message, args);
     }
