@@ -14,8 +14,8 @@ module.exports = {
                 
                 
                 .addField(`__**My developers:**__`, "Lead developer - luke.#0003\nDeveloper - TaraChambler13#0721")
-                .addField(`__**Special thanks to:**__`, "TheFlagen430297#2546\nshade_0x #2874")
-                .addField(`__**Latest update:**__`, "```diff\n-Kiss and ban commands won't ban mods/admins anymore.\n-Added -loot command (beta)\n-Added 'Latest Update' section to -botinfo ```")
+                .addField(`__**Special thanks to:**__`, "TheFlagen430297#2546\nshade_0x#2874")
+                .addField(`__**Latest update:**__`, "```diff\n-Kiss and ban commands won't ban mods/admins anymore.\n-Added -loot command (beta).\n-Added 'Latest Update' section to -botinfo.\n-You can mention up to 5 members in -insult,-kiss,,-fistbump-hug,-cry,-bite,-laugh.\n-Added -simp command. ```")
                 
                 .setTimestamp()
     
