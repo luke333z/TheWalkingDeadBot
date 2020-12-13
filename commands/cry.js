@@ -33,7 +33,7 @@ module.exports = {
             url1 = "https://cdn.discordapp.com/attachments/705049194682908782/765589917547233341/asta_planghe.gif"//pretena blonda a lu ricc cry
         }
         
-        const purrson = message.mentions.users.first();
+        const purrson = message.mentions.users.first(5);
         if(!purrson || message.author.id == purrson.id){
             const cryEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")

@@ -32,7 +32,7 @@ module.exports = {
             url1 = "https://cdn.discordapp.com/attachments/753567636968833103/765597937401069628/mishoun_smile.gif";//mishoun haha
         }
         
-        const purrson = message.mentions.users.first();
+        const purrson = message.mentions.users.first(5);
         if(!purrson || message.author.id == purrson.id){
             const laughEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")

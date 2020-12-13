@@ -1,1 +1,1 @@
-food,water,pen,snow,fish,
+Knife_a_1_1_50_80_durability,Shiv_a_1_1_60_100_durability,Blanket_s_1_2,Water Bottle_s_1_3_25_84_quality,Chlorine Tablets_some_1_1,Pain Killers_some_1_1,Antibiotics_some_1_1,Food Can_s_1_4_25_86_quality,Dagger_a_1_1_50_75_durability,Scrap Metal_some_1_1
