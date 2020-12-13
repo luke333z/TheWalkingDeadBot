@@ -4,7 +4,7 @@ module.exports = {
     name: 'simp',
     description: "simp",
     execute(message, args){
-        let user = message.mentions.users.first(5)
+        let user = message.mentions.users.first()
         if(!user){
             message.delete();
             message.channel.send("🇸 🇮 🇲 🇵")
