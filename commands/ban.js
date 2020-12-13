@@ -21,7 +21,14 @@ module.exports = {
                 .setFooter(process.env.DEVELOPER)
                     message.channel.send(bannoreasEmbed);
                 }else{
-
+                    if(message.mentions.users.first() == message.author || user.hasPermission('BAN_MEMBERS') ||  user.hasPermission('ADMINISTRATOR') ) {
+                        const noBanModz = new Discord.MessageEmbed()
+                        .setColor("RANDOM")
+                        .setDescription( `The user you tried to ban is a mod/admin. ` )
+                        .setTimestamp()
+                        .setFooter(process.env.DEVELOPER)
+                        return message.channel.send(noBanModz)
+                    }
 
 
             member

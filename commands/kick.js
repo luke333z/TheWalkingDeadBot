@@ -13,6 +13,23 @@ module.exports = {
             const member = message.guild.member(user);
         
         if(member){
+            if(!reason){
+                const bannoreasEmbed = new Discord.MessageEmbed()
+                .setColor("RANDOM")
+                .setDescription( `Please insert a reason. ` )
+                .setTimestamp()
+                .setFooter(process.env.DEVELOPER)
+                    message.channel.send(bannoreasEmbed);
+                }else{
+                    if(message.mentions.users.first() == message.author || user.hasPermission('KICK_MEMBERS') ||  user.hasPermission('ADMINISTRATOR') ) {
+                        const noBanModz = new Discord.MessageEmbed()
+                        .setColor("RANDOM")
+                        .setDescription( `The user you tried to kick is a mod/admin. ` )
+                        .setTimestamp()
+                        .setFooter(process.env.DEVELOPER)
+                        return message.channel.send(noBanModz)
+                    }
+
             member
             .kick(reason)
             .then(() => {
@@ -30,6 +47,7 @@ module.exports = {
               message.channel.send('I was unable to kick the member');
               console.error(err);
             });
+        }
         }else{
             const kicknoEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")
