@@ -15,8 +15,10 @@ module.exports = {
                 max = Math.floor(max+1);
                 return Math.floor(Math.random() * (max - min)) + min;
             };
-            var random = getRandomInt(0,10)
-            data=data.split(',')
+         
+          
+            var random = getRandomInt(0,data.length-1)
+            cLog(data)
             var deita = data[random]
             
             var things=deita.split('_')
