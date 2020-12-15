@@ -18,7 +18,7 @@ module.exports = {
          
           
             
-            data = data.split(',\r\n')
+            data = data.split(',\n\r')
             var random = getRandomInt(0,data.length-1)
             cLog(data.length-1);cLog(random);
             cLog(data)
