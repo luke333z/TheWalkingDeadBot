@@ -17,7 +17,10 @@ module.exports = {
             };
          
           
+            
+            data = data.split(',\r\n')
             var random = getRandomInt(0,data.length-1)
+            cLog(data.length-1);cLog(random);
             cLog(data)
             var deita = data[random]
             
