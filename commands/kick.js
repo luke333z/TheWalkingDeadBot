@@ -21,7 +21,7 @@ module.exports = {
                 .setFooter(process.env.DEVELOPER)
                     message.channel.send(bannoreasEmbed);
                 }else{
-                    if(message.mentions.users.first() == message.author || user.hasPermission('KICK_MEMBERS') ||  user.hasPermission('ADMINISTRATOR') ) {
+                    if(message.mentions.users.first() == message.author ) {
                         const noBanModz = new Discord.MessageEmbed()
                         .setColor("RANDOM")
                         .setDescription( `The user you tried to kick is a mod/admin. ` )

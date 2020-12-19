@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
 require('dotenv').config()
-client.login(process.env.token);
+client.login("NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g");
 //process.env.token
 //"NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g"
 
@@ -25,7 +25,7 @@ client.once('ready', () => {
     client.user.setActivity('The Walking Dead', {type: 'WATCHING'}).catch(console.error);
 });
 
-client.on('message', message =>{
+client.on('message', async message =>{
     
     if (message.author.bot) return  ;
     const prefix = db.get(`guild_${message.guild.id}_prefix`) || '-';
@@ -35,7 +35,9 @@ client.on('message', message =>{
     const command = args.shift().toLowerCase();
     if (!message.guild) return;
   
-      
+    if(command === 'react'){
+        client.commands.get('react').execute(message, args);
+    }
     if(command === 'loot'){
         client.commands.get('loot').execute(message, args);
     }
