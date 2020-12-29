@@ -17,11 +17,11 @@ module.exports = {
             };
          
           
-            
-            data = data.split(',')
+         
+            data = data.split('\r\n')
             var random = getRandomInt(0,data.length-1)
-            cLog(data.length-1);cLog(random);
-            cLog(data)
+            
+            
             var deita = data[random]
             
             var things=deita.split('_')
@@ -31,7 +31,7 @@ module.exports = {
                 things[1]=plural/singular form
                 things[2], things[3]=min and max number
                 things[4], things[5]=durability/quality max and min
-                things[6]= Durability/quality
+                things[6]= Durability/Quality
 
             */
            let num1 = parseInt(things[2], 10); 
@@ -46,7 +46,7 @@ module.exports = {
                 } else {
                          let dur =getRandomInt(dur1,dur2);
                        cLog("Path 1b");
-                      message.channel.send(`You got ${things[1]} ${things[0]} with ${dur}% ${things[6]}.`);
+                      message.channel.send(`You got ${things[1]} ${things[0]}. ${things[6]}: ${dur}%`);
                 }
             }else{
                
@@ -67,29 +67,19 @@ module.exports = {
                      //durability
 
                      let dur =getRandomInt(dur1,dur2)
-                     if(things[6]=="durability"){
+                    
                      if(n==1){
                         //one object, Path 3
                         cLog("Path 3a")
-                        message.channel.send(`You got ${n} ${things[0]} with ${dur}% ${things[6]}.`)
+                        message.channel.send(`You got ${n} ${things[0]}. ${things[6]}: ${dur}%`)
                     }else{
                         //more objects
                         cLog("Path 3b")
-                        message.channel.send(`You got ${n} ${things[0]}${things[1]} with ${dur}% ${things[6]}.`)
+                        message.channel.send(`You got ${n} ${things[0]}${things[1]}. ${things[6]}: ${dur}%`)
                     }
-                    }
-                    if(things[6]=="quality"){
-                    if(n==1){
-                       //one object
-                       cLog("Path 4a")
-                        message.channel.send(`You got ${n} ${things[0]}. Quality: ${dur}%`)
-                    }else{
-                       //more objects
-                       cLog("Path 4b")
-                        message.channel.send(`You got ${n} ${things[0]}${things[1]}. Quality: ${dur}%`)
-                    }
-                    }
-                }
+                   
+                   
+              }
             }
             
             
