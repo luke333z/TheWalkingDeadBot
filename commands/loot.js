@@ -18,7 +18,7 @@ module.exports = {
          
           
             
-            data = data.split('\n')
+            data = data.split('\r\n')
             var random = getRandomInt(0,data.length-1)
             
             
@@ -28,54 +28,59 @@ module.exports = {
             
             /*
                 things[0]=name
-                things[1]=plural/singular form
-                things[2], things[3]=min and max number
-                things[4], things[5]=durability/quality max and min
-                things[6]= Durability/Quality
+                things[1], things[2]=min and max number
+                things[3], things[4]=durability/quality max and min
+                things[5]= Durability/Quality
 
             */
-           let num1 = parseInt(things[2], 10); 
-           let num2 = parseInt(things[3], 10);
-           let dur1 = parseInt(things[4], 10); 
-           let dur2 = parseInt(things[5], 10)
-            if(things[2]==things[3]){
+           let num1 = parseInt(things[1], 10); 
+           let num2 = parseInt(things[2], 10);
+           let dur1 = parseInt(things[3], 10); 
+           let dur2 = parseInt(things[4], 10)
+            if(things[1]==things[2]){
                 //only one object
-                if(!things[6]){
+                if(!things[5]){
                     cLog("Path 1a")
-                    message.channel.send(`You got ${things[1]} ${things[0]}.`)
+                    const path1a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: 1` ).setTimestamp().setFooter("Loot Testing. @luke.#0003")
+                    message.channel.send(path1a)
                 } else {
                          let dur =getRandomInt(dur1,dur2);
                        cLog("Path 1b");
-                      message.channel.send(`You got ${things[1]} ${things[0]}. ${things[6]}: ${dur}%`);
+                       const path2a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: 1\n${things[5]}: ${dur}%` ).setTimestamp().setFooter("Loot Testing. @luke.#0003")
+                      message.channel.send(path2a);
                 }
             }else{
                
                 let n =getRandomInt(num1,num2)
                
-                if(!things[6]){
+                if(!things[5]){
                     //no durability
                     if(n==1){
                         //one object
                         cLog("Path 2a")
-                    message.channel.send(`You got ${n} ${things[0]}.`)
+                        const path2a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: ${n}` ).setTimestamp().setFooter("Loot Testing. @luke.#0003")
+                    message.channel.send(path2a)
                     }else{
                         //more objects
+                        const path2b = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: ${n}` ).setTimestamp().setFooter("Loot Testing. @luke.#0003")
                         cLog("Path 2b")
-                        message.channel.send(`You got ${n} ${things[0]}${things[1]}.`)
+                        message.channel.send(path2b)
                     }
-                }else if(things[6]){
+                }else if(things[5]){
                      //durability
 
                      let dur =getRandomInt(dur1,dur2)
                     
                      if(n==1){
-                        //one object, Path 3
+                        //one object
+                        const path3a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: ${n}\n${things[5]}: ${dur}%` ).setTimestamp().setFooter("Loot Testing. @luke.#0003")
                         cLog("Path 3a")
-                        message.channel.send(`You got ${n} ${things[0]}. ${things[6]}: ${dur}%`)
+                        message.channel.send(path3a)
                     }else{
                         //more objects
+                        const path3b = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: ${n}\n${things[5]}: ${dur}%` ).setTimestamp().setFooter("Loot Testing. @luke.#0003")
                         cLog("Path 3b")
-                        message.channel.send(`You got ${n} ${things[0]}${things[1]}. ${things[6]}: ${dur}%`)
+                        message.channel.send(path3b)
                     }
                    
                    

@@ -1,11 +1,11 @@
-Shiv_a_1_1_60_100_Durability
-Food Can_s_1_4_25_86_Quality
-Water Bottle_s_1_3_25_84_Quality
-Knife_a_1_1_50_80_Durability
-Scrap Metal_some_1_1
-Blanket_s_1_2
-Chlorine Tablets_some_1_1
-Pain Killers_some_1_1
-Antibiotics_some_1_1
-Dagger_a_1_1_50_75_Durability
-Lori's Wine_a bottle of_1_1_100_100_Quality
+Shiv_1_1_60_100_Durability
+Food Can_1_4_25_86_Quality
+Water Bottle_1_3_25_84_Quality
+Knife_1_1_50_80_Durability
+Scrap Metal_1_1
+Blanket_1_2
+Bottle of Chlorine Tablets_1_2
+Bottle of Pain Killers_1_1
+Bottle of Antibiotics_1_1
+Dagger_1_1_50_75_Durability
+A Bottle of Lori's Wine_1_1_100_100_Quality 
