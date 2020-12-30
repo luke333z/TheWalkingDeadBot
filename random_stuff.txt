@@ -8,4 +8,6 @@ Bottle of Chlorine Tablets_1_2
 Bottle of Pain Killers_1_1
 Bottle of Antibiotics_1_1
 Dagger_1_1_50_75_Durability
-A Bottle of Lori's Wine_1_1_100_100_Quality 
+A Bottle of Lori's Wine_1_1_100_100_Quality
+Rope_1_1
+Bar of Chocolate_1_2_25_76_Quality
