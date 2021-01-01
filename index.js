@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
 require('dotenv').config()
-client.login(process.env.token);
+client.login("NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g");
 //process.env.token
 //"NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g"
 
@@ -148,9 +148,8 @@ if(command === 'botinfo'){
     if(command === 'unban'){
         client.commands.get("unban").execute(message, args);
     }   
-    if(command === 'oc'){
-        client.commands.get("oc").execute(message, args);
-    }   
+   
+
 
 
 
@@ -163,7 +162,45 @@ if(command === 'botinfo'){
 
     
 });
+client.on('message', async message =>{
+    if(!message.guild.id === "745623527759282176") return;
+    if (message.author.bot) return  ;
+    const prefix = 'm!';
+    if(!message.content.startsWith(prefix)) return;
 
+    let args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+    if (!message.guild) return;
+    if(command === 'approve'){
+        message.delete();
+         let user =message.mentions.users.first().username;
+          let hi = args.slice(1).join(" ");
+          if(!user || !hi) return;
+          const embd = new Discord.MessageEmbed()
+          .setTitle(`${user}'s OC has been approved!`)
+          .setDescription(hi)
+          .setFooter("[Twd Server Manager](https://discord.gg/pqckK8q) • luke.#0003")
+          .setTimestamp();
+         
+          
+          const webhookClient = new Discord.WebhookClient("794228999034765312", "8iOIUx2ArgS862DfVtG513WgvMCFF9IESbHWFDgAkLXMZ3soLtJgjTwn2fUrVbiRdCOc");
+          
+        
+          
+          webhookClient.send({
+            username: 'OC Manager',
+	        avatarURL: 'https://i.imgur.com/G960Q69.jpg',
+	        embeds: [embd],
+    
+          });
+
+		
+		
+		
+    }   
+
+
+}); 
 
 
 
