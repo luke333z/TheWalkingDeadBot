@@ -172,6 +172,7 @@ client.on('message', async message =>{
     const command = args.shift().toLowerCase();
     if (!message.guild) return;
     if(command === 'approve'){
+        if(!message.channel.id === "783692577202634773") return;
         message.delete();
          let user =message.mentions.users.first().username;
           let hi = args.slice(1).join(" ");
