@@ -180,7 +180,7 @@ client.on('message', async message =>{
           const embd = new Discord.MessageEmbed()
           .setTitle(`${user}'s OC has been approved!`)
           .setDescription(hi)
-          .addField("\n", "[Twd Server Manager](https://discord.gg/pqckK8q) • luke.#0003")
+          .setFooter("Twd Server Manager")
           .setTimestamp();
          
           
