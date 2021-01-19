@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
 require('dotenv').config()
-client.login(process.env.token);
+client.login("NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g");
 //process.env.token
 //"NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g"
 
@@ -25,7 +25,7 @@ client.once('ready', () => {
     client.user.setActivity('The Walking Dead', {type: 'WATCHING'}).catch(console.error);
 });
 
-client.on('message', async message =>{
+client.on('message', message =>{
     
     if (message.author.bot) return  ;
     const prefix = db.get(`guild_${message.guild.id}_prefix`) || '-';
@@ -162,10 +162,10 @@ if(command === 'botinfo'){
 
     
 });
-client.on('message', async message =>{
+client.on('message',  message =>{
     if(!message.guild.id === "745623527759282176") return;
     if (message.author.bot) return  ;
-    const prefix = 'm!';
+  //  const prefix = 'm!';
     if(!message.content.startsWith(prefix)) return;
 
     let args = message.content.slice(prefix.length).split(/ +/);
@@ -173,7 +173,7 @@ client.on('message', async message =>{
     if (!message.guild) return;
     if(command === 'approve'){
         if(!message.channel.id === "783692577202634773") return;
-        message.delete();
+        message.delete().catch(console.error)
          let user =message.mentions.users.first().username;
           let hi = args.slice(1).join(" ");
           if(!user || !hi) return;
@@ -182,19 +182,20 @@ client.on('message', async message =>{
           .setDescription(hi)
           .setFooter("Twd Server Manager")
           .setTimestamp();
+          if(message.author.id != user.id){
+              message.channel.send("You can't approve your own OC.").setTimeout(() => {
+                  message.delete()
+              }, 3000);
+              return;
+          }
+          message.channel.send(embd)
          
           
-          const webhookClient = new Discord.WebhookClient("794228999034765312", "8iOIUx2ArgS862DfVtG513WgvMCFF9IESbHWFDgAkLXMZ3soLtJgjTwn2fUrVbiRdCOc");
-          
         
-          
-          webhookClient.send({
-            username: 'OC Manager',
-	        avatarURL: 'https://i.imgur.com/G960Q69.jpg',
-	        embeds: [embd],
-    
-          });
+         
 
+          
+    
 		
 		
 		
