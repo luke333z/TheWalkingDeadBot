@@ -129,26 +129,6 @@ if(command === 'botinfo'){
     if(command === 'random'){
         client.commands.get("random").execute(message, args);
     }   
-    if(command === 'test'){
-        client.commands.get("looting").execute(message, args);
-    }   
-
-
-
-    if(message.guild.id === "745623527759282176"){
-            //spooptober
-            //if(command === 'thespookindead'){
-          //     client.commands.get("thespookindead").execute(message, args);
-          //  }
-           
-
-    if(command === 'softban'){
-        client.commands.get("softban").execute(message, args);
-    }  
-    if(command === 'unban'){
-        client.commands.get("unban").execute(message, args);
-    }   
-   
 
 
 
@@ -158,22 +138,30 @@ if(command === 'botinfo'){
 
 
 
-    }
+
+
+
+
+
+    
 
     
 });
 client.on('message',  message =>{
     if(!message.guild.id === "745623527759282176") return;
     if (message.author.bot) return  ;
-  //  const prefix = 'm!';
+    const prefix = 'm!';
     if(!message.content.startsWith(prefix)) return;
 
     let args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     if (!message.guild) return;
+
+
+
     if(command === 'approve'){
         if(!message.channel.id === "783692577202634773") return;
-        message.delete().catch(console.error)
+        message.delete()
          let user =message.mentions.users.first().username;
           let hi = args.slice(1).join(" ");
           if(!user || !hi) return;
@@ -182,16 +170,122 @@ client.on('message',  message =>{
           .setDescription(hi)
           .setFooter("Twd Server Manager")
           .setTimestamp();
-          if(message.author.id != user.id){
-              message.channel.send("You can't approve your own OC.").setTimeout(() => {
-                  message.delete()
-              }, 3000);
+          if(message.author.id === message.mentions.users.first().id){
+              message.channel.send("You can't approve your own OC.")
               return;
+              
           }
           message.channel.send(embd)
          
+     }       
+         if(command === 'softban'){
+            const user = message.guild.member(message.mentions.users.first());
+            const reason = args.slice(1).join(" ");
+            const iusar = message.mentions.users.first();
+            const banRole = message.guild.roles.cache.find(r => r.name === 'Hammered')
+            if(!message.member.hasPermission("BAN_MEMBERS")){
+                message.channel.send("You don't have permission to ban.")
+            }else{
+             if(user){
+    
+                if(!reason){
+                    const bannoreasEmbed = new Discord.MessageEmbed()
+                    .setColor("RANDOM")
+                    .setDescription( `Please insert a reason. ` )
+                    .setTimestamp()
+                    .setFooter("Twd Server Manager")
+                        message.channel.send(bannoreasEmbed);
+                    }else{
+                        if(message.mentions.users.first() == message.author) {
+                            const noBanModz = new Discord.MessageEmbed()
+                            .setColor("RANDOM")
+                            .setDescription( `You can't ban yourself. ` )
+                            .setTimestamp()
+                            .setFooter("Twd Server Manager")
+                            return message.channel.send(noBanModz)
+                        }
+                        user.roles.set([]).catch(console.error)
+                        
+                        .then(() => {
+                            user.roles.add(banRole.id)
+                            const banEmbed = new Discord.MessageEmbed()
+                            .setColor("RANDOM")
+                            .setDescription( `${iusar.tag} was successfully banned. ` )
+                            .addField('Reason:', `${reason}`)
+                            .addField('Moderator:', `${message.author.tag}`)
+                            .setImage('https://cdn.discordapp.com/attachments/705049194682908782/758245013947285514/rcik_ban.gif')
+                            .setTimestamp()
+                            .setFooter("Twd Server Manager")
+                                message.channel.send(banEmbed);
+                            })
+                            .catch(err => {
+                              message.channel.send('I was unable to ban the member');
+                              console.error(err);
+                            });
+                    }
+              
+            
           
+            }else{
+                const banhelpEmbed = new Discord.MessageEmbed()
+                .setColor("RANDOM")
+                .setTitle("-softban (member) (reason)")
+                .setDescription( `Softbans a mamber.` )
+                .setFooter(`"wd Server Manager • ()-required arguments, []-optional arguments`);
+                    message.channel.send(banhelpEmbed);
+            }
+    
+        }
+    
         
+    
+    
+    
+   }
+
+   if(command === 'unban'){
+    const user = message.guild.member(message.mentions.users.first());
+    const iusar = message.mentions.users.first();
+    const Role = message.guild.roles.cache.find(r => r.name === 'TheWalkingDeadFan')
+    if(!message.member.hasPermission("BAN_MEMBERS")){
+        message.channel.send("You don't have permission to unban.")
+    }else{
+     if(user){
+
+        
+           if(user.roles.cache.has('772699412144324668')){
+                
+                user.roles.set([]).catch(console.error)
+                
+                .then(() => {
+                    user.roles.add(Role.id)
+                    const banEmbed = new Discord.MessageEmbed()
+                    .setColor("RANDOM")
+                    .setDescription( `${iusar.tag} was successfully unbanned. ` )
+                    .addField('Moderator:', `${message.author.tag}`)
+                    .setTimestamp()
+                    .setFooter("Twd Server Manager")
+                        message.channel.send(banEmbed);
+                    })
+                    .catch(err => {
+                      message.channel.send('I was unable to unban the member');
+                      console.error(err);
+                    });
+                }else return message.channel.send("That member isn't banned.")
+      
+    
+  
+        }else{
+        const banhelpEmbed = new Discord.MessageEmbed()
+        .setColor("RANDOM")
+        .setTitle("-unban (member)")
+        .setDescription( `Unbans a mamber.` )
+        .setFooter(`Twd Server Manager • ()-required arguments, []-optional arguments`);
+            message.channel.send(banhelpEmbed);
+    }
+
+}
+   }
          
 
           
@@ -199,7 +293,7 @@ client.on('message',  message =>{
 		
 		
 		
-    }   
+     
 
 
 }); 
