@@ -170,11 +170,11 @@ client.on('message',  message =>{
           .setDescription(hi)
           .setFooter("Twd Server Manager")
           .setTimestamp();
-          if(message.author.id === message.mentions.users.first().id){
-              message.channel.send("You can't approve your own OC.")
-              return;
+         // if(message.author.id === message.mentions.users.first().id){
+            //  message.channel.send("You can't approve your own OC.")
+            //  return;
               
-          }
+         // }
           message.channel.send(embd)
          
      }       
