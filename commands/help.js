@@ -6,7 +6,11 @@ module.exports = {
     description: "Help command",
     execute(message, args){
         if(args[0] === "f"){
-            const f = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-f`", "Pay your respects.").setFooter(`${process.env.DEVELOPER} •`); 
+            const f = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-f [text]`", "Pay your respects.").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`); 
+            message.channel.send(f);
+        }
+        if(args[0] === "remember"){
+            const f = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-remember [text]`", "Luke will remember that.").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`); 
             message.channel.send(f);
         }
         if(args[0] === "coinflip"){
@@ -102,7 +106,7 @@ module.exports = {
             .setColor("RANDOM")
             .setDescription("Below you can see all the things I'm programmed to do.\n If you need any more help send a message to @luke.#8235.")
             .addField("__**COMMANDS**__", "\u200b")
-            .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`")
+            .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`, `remember`")
             .addField("**MODERATION**", "`ban`, `kick`")
             .addField("**GIFS**", "`kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`")
             .addField("**UTIL**", "`avatar`, `userinfo`, `prefix`, `serverinfo`, `createpoll`, `botinfo`")

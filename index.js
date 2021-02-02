@@ -34,7 +34,14 @@ client.on('message', message =>{
     let args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     if (!message.guild) return;
-  
+   if(command === 'remember'){
+    const negan = args.slice(0).join(" ");
+        if(!negan){
+        message.channel.send(`**${message.author.username}**` + ` will remember that.`)
+        } else {
+            message.channel.send(`**${negan}** will remember that.`);
+        }
+    }
     if(command === 'react'){
         client.commands.get('react').execute(message, args);
     }
