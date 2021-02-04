@@ -20,7 +20,7 @@ module.exports = {
             const embed2 = new Discord.MessageEmbed()
             .setTitle(`${user}, your oc request has been rejected.`)
             .setDescription(oc);
-
+            message.delete()
             var Msg = await message.channel.send(request);
             message.channel.send("<@332867444505051137>")
             Msg.react('✅').then(() => Msg.react('❌'));
