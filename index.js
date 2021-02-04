@@ -42,9 +42,7 @@ client.on('message', message =>{
             message.channel.send(`**${negan}** will remember that.`);
         }
     }
-    if(command === 'react'){
-        client.commands.get('react').execute(message, args);
-    }
+   
     if(command === 'loot'){
         client.commands.get('loot').execute(message, args);
     }
@@ -157,7 +155,7 @@ if(command === 'botinfo'){
 client.on('message',  message =>{
     if(!message.guild.id === "745623527759282176") return;
     if (message.author.bot) return  ;
-    const prefix = 'm!';
+    const prefix = '-';
     if(!message.content.startsWith(prefix)) return;
 
     let args = message.content.slice(prefix.length).split(/ +/);
@@ -295,7 +293,9 @@ client.on('message',  message =>{
    }
          
 
-          
+   if(command === 'request'){
+    client.commands.get('request').execute(message, args);
+}   
     
 		
 		
