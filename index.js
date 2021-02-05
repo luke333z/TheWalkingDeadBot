@@ -36,6 +36,7 @@ client.on('message', message =>{
     if (!message.guild) return;
    if(command === 'remember'){
     const negan = args.slice(0).join(" ");
+    message.delete()
         if(!negan){
         message.channel.send(`**${message.author.username}**` + ` will remember that.`)
         } else {
@@ -295,6 +296,13 @@ client.on('message',  message =>{
 
    if(command === 'request'){
     client.commands.get('request').execute(message, args);
+}   
+if(command === 'templates'){
+    const temp = new Discord.MessageEmbed()
+       .addField(`**OC Template**`, `Name:\nNicknames(if any):\nAge:\nGender:\nSexuality:\nNationality:\nBirthplace:\n\n**Inventory**\n\n1:\n2:\n3:\n4:\n5:\n\n**Appearance**\n\nHair colour:\nEye colour:\nSkin colour:\nClothing:\n\n**Personality**\n\nPersonality:\nStrengths:\nWeaknesses:\nFears:\n\n**Other**\n\nBackstory:\nExtra (If any):\n`, true)
+       .addField(`**Pet Template:**`, `Name:\nNicknames(if any):\nAge:\nGender:\nSpecies:\nBreed:\n\nHair colour:\nEye colour:\n\nPersonality:\nWeaknesses:\n\nBackstory:\nExtra (If any):`, true)
+
+        message.channel.send(temp)
 }   
     
 		

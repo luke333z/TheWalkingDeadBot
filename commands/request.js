@@ -5,7 +5,7 @@ module.exports = {
     description: "¯\_(ツ)_/¯",
     execute(message, args){
         async function declaredAsAsync() {
-            ch = client.channels.cache.get('783692577202634773');
+            
     
             const oc = args.slice(0).join(" ");
             if(!oc) return;
