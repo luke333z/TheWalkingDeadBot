@@ -137,12 +137,12 @@ if(command === 'botinfo'){
     }   
 
 
-
-
-
-
-
-
+if(command === 'stop'){
+    if(message.author.id != "332867444505051137") return message.channel.send("Noob")
+    else{
+    client.stop()
+    }
+}
 
 
 

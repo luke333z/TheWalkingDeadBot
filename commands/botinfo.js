@@ -15,7 +15,7 @@ module.exports = {
                 
                 .addField(`__**My developers:**__`, "Lead developer - luke.#0003\nDeveloper - TaraChambler13#0721")
                 .addField(`__**Special thanks to:**__`, "TheFlagen430297#2546\nshade_0x#2874")
-                .addField(`__**Latest update:**__`, "```diff\n-Added existing commands for specific serevrs.\n-Added -templates command. ```")
+                .addField(`__**Latest update:**__`, "```diff\n-Added existing commands for specific serevrs.\n-Added -templates command.\n-Added -remember command. ```")
                 
                 .setTimestamp()
     
