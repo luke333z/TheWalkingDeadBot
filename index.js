@@ -135,6 +135,9 @@ if(command === 'botinfo'){
     if(command === 'random'){
         client.commands.get("random").execute(message, args);
     }   
+    if(command === 'commands'){
+        client.commands.get("commands").execute(message, args);
+    }   
 
 
 if(command === 'stop'){
@@ -304,18 +307,52 @@ if(command === 'templates'){
 
         message.channel.send(temp)
 }   
-    
-		
-		
-		
-     
-
-
 }); 
 
 
 
 
+client.on('message',  message =>{
+    if(!message.guild.id === "786897678159052802") return;
+    if (message.author.bot) return  ;
+    const prefix = '-';
+    if(!message.content.startsWith(prefix)) return;
 
+    let args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+    if (!message.guild) return;
+
+
+    if(command === "soluția" || command === "solutia") message.channel.send("CĂCAT!")
+    if(command === "relu") message.channel.send("RELU <:RELU:803580709238865940>")
+    if(command === "vârstă" || command === "varsta") message.channel.send("I have 14 years old.")
+    if(command === "unde") message.channel.send("Într-un CITY BREAK")
+    if(command === "fall") message.channel.send("N-ai feather falling?")
+    if(command === "camere") message.channel.send("DĂ FAKE LA CAMERE!")
+    if(command === "bizon") message.channel.send("BONZAI")
+    if(command === "pistol") message.channel.send("DUAL BITĂRS")
+    if(command === "senpai") message.channel.send("SIMPAI")//need to expand
+    if(command === "mut") message.channel.send("DAȚI-VĂ PE MOOTE!")
+    if(command === "deafen") message.channel.send("DĂ-TE DE PE DIFĂN!")
+    if(command === "earrape") message.channel.send("NU MAI FACEȚI EARRAPE CĂ VĂ DAU DISCONNECT!")
+    if(command === "sprint") message.channel.send("AM SPRINT-UL PE CAPS")
+    if(command === "doamnă" || command === "doamna" || command === "duamna") message.channel.send("HIII, DOAMNĂ, DAR VĂ ROG FOARTE MULT SĂ NU MAI SPUNEȚI AȘA CEVA, DAR SUNTEM LA TELEVIZOR!")
+    if(command === "pupici" || command === "pulici"){
+        message.channel.send("pulici")
+        message.channel.send("pupici")
+        message.channel.send("cum sterg")
+    }
+    if(command === "ceye") message.channel.send("ye klar")
+    if(command === "ceye2") message.channel.send("ayaye")
+    if(command === "flash") message.channel.send("DAU FLASH")
+    if(command === "edi2"){
+        const edi2 = new Discord.MessageEmbed().setColor("RANDOM").setImage("https://cdn.discordapp.com/attachments/705049194682908782/809749697564377138/unknown.png")
+        message.channel.send(edi2)
+    }
+    if(command === "edi"){
+        const edi = new Discord.MessageEmbed().setColor("RANDOM").setImage("https://cdn.discordapp.com/attachments/786897679375925260/809772995534782474/IMG-20210211-WA0004.png")
+        message.channel.send(edi)
+    }
+});
 
 

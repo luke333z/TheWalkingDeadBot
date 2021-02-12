@@ -97,8 +97,12 @@ module.exports = {
                 const serverinfo = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-botinfo`", "Bot information.").setFooter(`${process.env.DEVELOPER} •`);
                 message.channel.send(serverinfo);
             }
+            if(args[0] === "commands"){
+                const serverinfo = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-commands`", "Shows all available commands.").setFooter(`${process.env.DEVELOPER} •`);
+                message.channel.send(serverinfo);
+            }
              if(args[0] === "createpoll"){
-                const random = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-createpoll (Question)`", "Creates a poll in the channel you typed this command.").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
+                const random = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-poll (Question)`", "Creates a poll in the channel you typed this command.").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
                 message.channel.send(random);
         }else if(!args[0]){
             const helpEmbed = new Discord.MessageEmbed()
@@ -109,7 +113,7 @@ module.exports = {
             .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`, `remember`")
             .addField("**MODERATION**", "`ban`, `kick`")
             .addField("**GIFS**", "`kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`")
-            .addField("**UTIL**", "`avatar`, `userinfo`, `prefix`, `serverinfo`, `createpoll`, `botinfo`")
+            .addField("**UTIL**", "`avatar`, `userinfo`, `prefix`, `serverinfo`, `poll`, `botinfo`, `commands`")
             .addField("**Use `-help <Commmand>` for more information about a command.**", "**Example:** \n`-help avatar` for more info about the avatar command.")
             .addField("Useful links:", "[Invite Me](https://discord.com/api/oauth2/authorize?client_id=748105665301708883&permissions=8&scope=bot), [The Walking Dead Server](https://discord.gg/pqckK8q)")
             .setTimestamp()
