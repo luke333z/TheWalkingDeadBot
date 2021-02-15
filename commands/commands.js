@@ -7,7 +7,7 @@ module.exports = {
        
         const command = "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`, `remember`, `ban`, `kick`, `kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`, `avatar`, `userinfo`, `prefix`, `serverinfo`, `poll`, `botinfo`"
         const twd = "`approve`, `softban`, `unban`, `request`, `templates`"
-        const marocanii = "`soluția/solutia`, `relu`, `vârstă/varsta`, `unde`, `fall`, `camere`, `bizon`, `pistol`, `senpai`, `mut`, `deafen`, `earrape`, `sprint`, `doamnă/doamna/duamna`, `pupici/pulici`, `ceye`, `ceye2`, `flash`, `edi`, `edi2`"
+        const marocanii = "`soluția/solutia`, `relu`, `vârstă/varsta`, `unde`, `fall`, `camere`, `bizon`, `pistol`, `senpai`, `mut`, `deafen`, `earrape`, `sprint`, `sprint2`, `doamnă/doamna/duamna`, `pupici/pulici`, `ceye`, `ceye2`, `ceye3`, `flash`, `edi`, `edi2`"
         if(message.guild.id === "786897678159052802"){//marocanii
             const marocanii1 = new Discord.MessageEmbed().setColor("RANDOM")
             .setDescription("**All Bot Commands**")

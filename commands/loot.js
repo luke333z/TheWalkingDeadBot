@@ -41,12 +41,12 @@ module.exports = {
                 //only one object
                 if(!things[5]){
                     cLog("Path 1a")
-                    const path1a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: 1` ).setTimestamp().setFooter("Loot Testing. @luke.#0003")
+                    const path1a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: 1` ).setTimestamp().setFooter("@luke.#0003")
                     message.channel.send(path1a)
                 } else {
                          let dur =getRandomInt(dur1,dur2);
                        cLog("Path 1b");
-                       const path2a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: 1\n${things[5]}: ${dur}%` ).setTimestamp().setFooter("Loot Testing. @luke.#0003")
+                       const path2a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: 1\n${things[5]}: ${dur}%` ).setTimestamp().setFooter("@luke.#0003")
                       message.channel.send(path2a);
                 }
             }else{
@@ -58,11 +58,11 @@ module.exports = {
                     if(n==1){
                         //one object
                         cLog("Path 2a")
-                        const path2a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: ${n}` ).setTimestamp().setFooter("Loot Testing. @luke.#0003")
+                        const path2a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: ${n}` ).setTimestamp().setFooter("@luke.#0003")
                     message.channel.send(path2a)
                     }else{
                         //more objects
-                        const path2b = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: ${n}` ).setTimestamp().setFooter("Loot Testing. @luke.#0003")
+                        const path2b = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: ${n}` ).setTimestamp().setFooter("@luke.#0003")
                         cLog("Path 2b")
                         message.channel.send(path2b)
                     }
@@ -73,12 +73,12 @@ module.exports = {
                     
                      if(n==1){
                         //one object
-                        const path3a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: ${n}\n${things[5]}: ${dur}%` ).setTimestamp().setFooter("Loot Testing. @luke.#0003")
+                        const path3a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: ${n}\n${things[5]}: ${dur}%` ).setTimestamp().setFooter("@luke.#0003")
                         cLog("Path 3a")
                         message.channel.send(path3a)
                     }else{
                         //more objects
-                        const path3b = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: ${n}\n${things[5]}: ${dur}%` ).setTimestamp().setFooter("Loot Testing. @luke.#0003")
+                        const path3b = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + things[0] + "`", `Count: ${n}\n${things[5]}: ${dur}%` ).setTimestamp().setFooter("@luke.#0003")
                         cLog("Path 3b")
                         message.channel.send(path3b)
                     }

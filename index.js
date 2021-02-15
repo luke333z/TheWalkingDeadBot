@@ -75,8 +75,8 @@ client.on('message', message =>{
 if(command === 'botinfo'){
     client.commands.get('botinfo').execute(message, args, prefix);
 }
-    if(command === 'createpoll'){
-        client.commands.get('createpoll').execute(message, args);
+    if(command === 'poll'){
+        client.commands.get('poll').execute(message, args);
     }
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
@@ -336,6 +336,7 @@ client.on('message',  message =>{
     if(command === "deafen") message.channel.send("DĂ-TE DE PE DIFĂN!")
     if(command === "earrape") message.channel.send("NU MAI FACEȚI EARRAPE CĂ VĂ DAU DISCONNECT!")
     if(command === "sprint") message.channel.send("AM SPRINT-UL PE CAPS")
+    if(command === "sprint2") message.channel.send("șprint")
     if(command === "doamnă" || command === "doamna" || command === "duamna") message.channel.send("HIII, DOAMNĂ, DAR VĂ ROG FOARTE MULT SĂ NU MAI SPUNEȚI AȘA CEVA, DAR SUNTEM LA TELEVIZOR!")
     if(command === "pupici" || command === "pulici"){
         message.channel.send("pulici")
@@ -344,6 +345,7 @@ client.on('message',  message =>{
     }
     if(command === "ceye") message.channel.send("ye klar")
     if(command === "ceye2") message.channel.send("ayaye")
+    if(command === "ceye3") message.channel.send("urît")
     if(command === "flash") message.channel.send("DAU FLASH")
     if(command === "edi2"){
         const edi2 = new Discord.MessageEmbed().setColor("RANDOM").setImage("https://cdn.discordapp.com/attachments/705049194682908782/809749697564377138/unknown.png")

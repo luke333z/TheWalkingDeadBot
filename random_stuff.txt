@@ -11,3 +11,13 @@ Dagger_1_1_50_75_Durability
 A Bottle of Lori's Wine_1_1_100_100_Quality
 Rope_1_1
 Bar of Chocolate_1_2_25_76_Quality
+Teddy Bear_1_1
+Lamp_1_1
+Batteries_1_3_10_76_Quality
+Torch_1_1_20_50_Durability
+Frag Grenade_1_1
+Smoke Grenade_1_1
+Tent_1_1_20_70_Durability
+Fuel Canister_1_1
+Toy Soviet Tank_1_1
+Bananas_1_2_20_75_Quality
