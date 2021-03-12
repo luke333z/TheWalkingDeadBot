@@ -25,6 +25,10 @@ module.exports = {
             const simp = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-simp (member)`", "🇸 🇮 🇲 🇵").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
             message.channel.send(simp);
         }
+        if(args[0] === "bonk"){
+            const simp = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-bonk (member)`", "BONK! Go to Horny Jail").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
+            message.channel.send(simp);
+        }
         if(args[0] === "shrug"){
             const shrug = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-shrug`", "¯\\_(ツ)_/¯").setFooter(`${process.env.DEVELOPER} •`);
             message.channel.send(shrug);
@@ -114,7 +118,7 @@ module.exports = {
             .setColor("RANDOM")
             .setDescription("Below you can see all the things I'm programmed to do.\n If you need any more help send a message to @luke.#8235.")
             .addField("__**COMMANDS**__", "\u200b")
-            .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`, `remember`")
+            .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`, `bonk`, `remember`")
             .addField("**MODERATION**", "`ban`, `kick`")
             .addField("**GIFS**", "`kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`")
             .addField("**UTIL**", "`avatar`, `userinfo`, `prefix`, `serverinfo`, `poll`, `botinfo`, `commands`")

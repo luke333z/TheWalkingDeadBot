@@ -8,7 +8,7 @@ module.exports = {
         const reason = args.slice(1).join(" ");
         if(!message.member.hasPermission("KICK_MEMBERS")){
             message.channel.send("You don't have permission to kick.")
-        }else{
+      }else{
         if(user){
             const member = message.guild.member(user);
         
@@ -65,7 +65,7 @@ module.exports = {
                 message.channel.send(kickhelpEmbed);
         }
 
-    }
+ }
 
 
 

@@ -50,6 +50,9 @@ client.on('message', message =>{
     if(command === 'simp'){
         client.commands.get('simp').execute(message, args);
     }
+    if(command === 'bonk'){
+        client.commands.get('bonk').execute(message, args);
+    }
     if(command === 'serverinfo'){
         client.commands.get('serverinfo').execute(message, args);
     }
@@ -128,7 +131,7 @@ if(command === 'botinfo'){
     }
     if(command === 'fistbump'){
         client.commands.get("fistbump").execute(message, args);
-    }
+    
     if(command === 'userinfo'){
         client.commands.get("userinfo").execute(message, args);
     }
@@ -155,7 +158,7 @@ if(command === 'stop'){
     
 
     
-});
+}});
 client.on('message',  message =>{
     if(!message.guild.id === "745623527759282176") return;
     if (message.author.bot) return  ;
@@ -297,9 +300,7 @@ client.on('message',  message =>{
    }
          
 
-   if(command === 'request'){
-    client.commands.get('request').execute(message, args);
-}   
+ 
 if(command === 'templates'){
     const temp = new Discord.MessageEmbed()
        .addField(`**OC Template**`, `Name:\nNicknames(if any):\nAge:\nGender:\nSexuality:\nNationality:\nBirthplace:\n\n**Inventory**\n\n1:\n2:\n3:\n4:\n5:\n\n**Appearance**\n\nHair colour:\nEye colour:\nSkin colour:\nClothing:\n\n**Personality**\n\nPersonality:\nStrengths:\nWeaknesses:\nFears:\n\n**Other**\n\nBackstory:\nExtra (If any):\n`, true)
@@ -331,8 +332,10 @@ client.on('message',  message =>{
     if(command === "camere") message.channel.send("DĂ FAKE LA CAMERE!")
     if(command === "bizon") message.channel.send("BONZAI")
     if(command === "pistol") message.channel.send("DUAL BITĂRS")
-    if(command === "senpai") message.channel.send("SIMPAI")//need to expand
+    if(command === "chimie") message.channel.send("GOGOLOIU")
+    if(command === "senpai") message.channel.send("SIMPAI")
     if(command === "mut") message.channel.send("DAȚI-VĂ PE MOOTE!")
+    if(command === "skribbl") message.channel.send("JOACO PASTA RHIANO")
     if(command === "deafen") message.channel.send("DĂ-TE DE PE DIFĂN!")
     if(command === "earrape") message.channel.send("NU MAI FACEȚI EARRAPE CĂ VĂ DAU DISCONNECT!")
     if(command === "sprint") message.channel.send("AM SPRINT-UL PE CAPS")
@@ -342,6 +345,10 @@ client.on('message',  message =>{
         message.channel.send("pulici")
         message.channel.send("pupici")
         message.channel.send("cum sterg")
+    }
+    if(command === "stațipuțin" || command === "statiputin"){
+        message.channel.send("BA TURBATULE")
+        message.channel.send("ÎN LANȚ TE PUN")
     }
     if(command === "ceye") message.channel.send("ye klar")
     if(command === "ceye2") message.channel.send("ayaye")
@@ -356,5 +363,3 @@ client.on('message',  message =>{
         message.channel.send(edi)
     }
 });
-
-

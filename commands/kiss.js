@@ -27,7 +27,7 @@ module.exports = {
             url1 = "https://cdn.discordapp.com/attachments/753567636968833103/765596783538995221/sahsah_bob_kis.gif"//sasha bob
         }
         
-        const purrson = message.mentions.users.first(5); 
+        const purrson = message.mentions.users.first(); 
 if(!purrson || message.author.id == purrson.id){ 
     const kissUrselfEmbed = new Discord.MessageEmbed() 
     .setColor("RANDOM")
