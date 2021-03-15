@@ -131,7 +131,7 @@ if(command === 'botinfo'){
     }
     if(command === 'fistbump'){
         client.commands.get("fistbump").execute(message, args);
-    
+    }
     if(command === 'userinfo'){
         client.commands.get("userinfo").execute(message, args);
     }
@@ -141,8 +141,23 @@ if(command === 'botinfo'){
     if(command === 'commands'){
         client.commands.get("commands").execute(message, args);
     }   
-
-
+    if(command === 'rcreate'){
+        if(message.author.id != "332867444505051137") return message.channel.send("Noob")
+        else{
+            message.guild.roles.create({ data: { name: args[0], color: args[1] } });
+            message.channel.send("Role Created")
+            }
+    }
+    if(command === 'radd'){
+        if(message.author.id != "332867444505051137") return;
+        else{
+            const user = message.guild.member(message.author);
+            const gibRole = message.guild.roles.cache.find(r => r.name === `${args[0]}`)
+            user.roles.add(gibRole)
+            message.channel.send("Role Added")
+            }
+    }
+   
 if(command === 'stop'){
     if(message.author.id != "332867444505051137") return message.channel.send("Noob")
     else{
@@ -158,7 +173,7 @@ if(command === 'stop'){
     
 
     
-}});
+});
 client.on('message',  message =>{
     if(!message.guild.id === "745623527759282176") return;
     if (message.author.bot) return  ;
