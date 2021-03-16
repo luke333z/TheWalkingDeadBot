@@ -6,9 +6,9 @@ module.exports = {
     execute(message, args){
         const user = message.mentions.users.first();
         const reason = args.slice(1).join(" ");
-      if(!message.member.hasPermission("BAN_MEMBERS")){
+     // if(!message.member.hasPermission("BAN_MEMBERS")){
           message.channel.send("You don't have permission to ban.")
-       }else{
+      // }else{
        if(user){
             const member = message.guild.member(user);
         
@@ -76,5 +76,5 @@ module.exports = {
 
 
 
-    }
+    //}
 }
