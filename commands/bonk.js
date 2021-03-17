@@ -8,7 +8,7 @@ module.exports = {
         if(!purrson || message.author.id == purrson.id){
             const hEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")
-            .setDescription( `BONK! <@${message.author.id}>` + ' sent himself to Horny Jail' )
+            .setDescription( `BONK! <@${message.author.id}>` + ' sent themselves to Horny Jail' )
             .setImage('https://cdn.discordapp.com/attachments/705049194682908782/819947273014083614/Ricc_BONK.gif')
             .setTimestamp()
             .setFooter(process.env.DEVELOPER)
