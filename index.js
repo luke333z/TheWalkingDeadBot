@@ -355,7 +355,7 @@ client.on('message',  message =>{
     if(command === "earrape") message.channel.send("NU MAI FACEȚI EARRAPE CĂ VĂ DAU DISCONNECT!")
     if(command === "sprint") message.channel.send("AM SPRINT-UL PE CAPS")
     if(command === "sprint2") message.channel.send("șprint")
-    if(command === "doamnă" || command === "doamna" || command === "duamna") message.channel.send("HIII, DOAMNĂ, DAR VĂ ROG FOARTE MULT SĂ NU MAI SPUNEȚI AȘA CEVA, DAR SUNTEM LA TELEVIZOR!")
+    if(command === "doamnă" || command === "doamna" || command === "duamna") message.channel.send("HIII, DOAMNĂ, VĂ ROG FOARTE MULT SĂ NU MAI SPUNEȚI AȘA CEVA, DAR SUNTEM LA TELEVIZOR!")
     if(command === "pupici" || command === "pulici"){
         message.channel.send("pulici")
         message.channel.send("pupici")
