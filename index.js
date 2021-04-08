@@ -178,7 +178,7 @@ if(command === 'stop'){
     
 });
 client.on('message',  message =>{
-    if(!message.guild.id === "745623527759282176") return;
+    
     if (message.author.bot) return  ;
     const prefix = '-';
     if(!message.content.startsWith(prefix)) return;
@@ -187,10 +187,11 @@ client.on('message',  message =>{
     const command = args.shift().toLowerCase();
     if (!message.guild) return;
 
+    if(!message.guild.id !== "745623527759282176") return;
 
 
     if(command === 'approve'){
-        if(!message.channel.id === "783692577202634773") return;
+        
         message.delete()
          let user =message.mentions.users.first().username;
           let hi = args.slice(1).join(" ");
@@ -261,7 +262,7 @@ client.on('message',  message =>{
                 .setColor("RANDOM")
                 .setTitle("-softban (member) (reason)")
                 .setDescription( `Softbans a mamber.` )
-                .setFooter(`"wd Server Manager • ()-required arguments, []-optional arguments`);
+                .setFooter(`Twd Server Manager • ()-required arguments, []-optional arguments`);
                     message.channel.send(banhelpEmbed);
             }
     
@@ -333,8 +334,9 @@ if(command === 'templates'){
 
 
 client.on('message',  message =>{
-    if(!message.guild.id === "822458359143333998") return;
-    else{
+    
+    
+    
     if (message.author.bot) return  ;
     const prefix = '-';
     if(!message.content.startsWith(prefix)) return;
@@ -342,7 +344,7 @@ client.on('message',  message =>{
     let args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     if (!message.guild) return;
-
+    if(message.guild.id !== "822458359143333998") return;
 
     if(command === "soluția" || command === "solutia") message.channel.send("CĂCAT!")
     if(command === "relu") message.channel.send("RELU <:RELU:829684586660364338>")
@@ -388,23 +390,6 @@ client.on('message',  message =>{
         const edi = new Discord.MessageEmbed().setColor("RANDOM").setImage("https://cdn.discordapp.com/attachments/786897679375925260/809772995534782474/IMG-20210211-WA0004.png")
         message.channel.send(edi)
     }
-}
+
 });
 
-client.on('message', async message => {
-    if (message.author.bot) return  ;
-    const prefix = '-';
-    if(!message.content.startsWith(prefix)) return;
-
-    let args = message.content.slice(prefix.length).split(/ +/);
-    const command = args.shift().toLowerCase();
-    if (!message.guild) return;
-    if(command === 'join'){
-        if (message.member.voice.channel) {
-            const connection = await message.member.voice.channel.join();
-            
-        } 
-        
-    }
-
-})
