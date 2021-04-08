@@ -101,6 +101,10 @@ module.exports = {
                 const serverinfo = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-botinfo`", "Bot information.").setFooter(`${process.env.DEVELOPER} •`);
                 message.channel.send(serverinfo);
             }
+            if(args[0] === "bingus"){
+                const serverinfo = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-bingus`", "<:bingus:829475084598509601>").setFooter(`${process.env.DEVELOPER} •`);
+                message.channel.send(serverinfo);
+            }
             if(args[0] === "commands"){
                 const serverinfo = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-commands`", "Shows all available commands.").setFooter(`${process.env.DEVELOPER} •`);
                 message.channel.send(serverinfo);
@@ -118,7 +122,7 @@ module.exports = {
             .setColor("RANDOM")
             .setDescription("Below you can see all the things I'm programmed to do.\n If you need any more help send a message to @luke.#8235.")
             .addField("__**COMMANDS**__", "\u200b")
-            .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`, `bonk`, `remember`")
+            .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`, `bonk`, `remember`, `bingus`")
             .addField("**MODERATION**", "`ban`, `kick`")
             .addField("**GIFS**", "`kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`")
             .addField("**UTIL**", "`avatar`, `userinfo`, `prefix`, `serverinfo`, `poll`, `botinfo`, `commands`")

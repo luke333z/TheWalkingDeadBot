@@ -2,17 +2,17 @@ const Discord = require("discord.js");
 
 module.exports = {
     name: 'commands',
-    description: "Pay your respects.",
+    description: "Commands",
     execute(message, args){
        
         const command = "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`, `bonk`, `remember`, `ban`, `kick`, `kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`, `avatar`, `userinfo`, `prefix`, `serverinfo`, `poll`, `botinfo`"
         const twd = "`approve`, `softban`, `unban`, `request`, `templates`"
-        const marocanii = "`soluția/solutia`, `relu`, `vârstă/varsta`, `unde`, `fall`, `camere`, `bizon`, `pistol`, `chimie`, `senpai`, `mut`, `skribbl`, `deafen`, `earrape`, `sprint`, `sprint2`, `doamnă/doamna/duamna`, `pupici/pulici`, `stațipuțin/statiputin`, `ceye`, `ceye2`, `ceye3`, `flash`, `edi`, `edi2`"
-        if(message.guild.id === "786897678159052802"){//marocanii
+        const clubulluimickeymouse = "`soluția/solutia`, `relu`, `vârstă/varsta`, `unde`, `fall`, `camere`, `bizon`, `pistol`, `chimie`, `senpai`, `mut`, `skribbl`, `deafen`, `earrape`, `sprint`, `sprint2`, `dmm`, `omaigad`, `copil`, `doamnă/doamna/duamna`, `pupici/pulici`, `stațipuțin/statiputin`, `ceye`, `ceye2`, `ceye3`, `ceye4`, `flash`, `edi`, `edi2`"
+        if(message.guild.id === "822458359143333998"){//marocanii
             const marocanii1 = new Discord.MessageEmbed().setColor("RANDOM")
             .setDescription("**All Bot Commands**")
             .addField("Commands", command)
-            .addField("Server-Only Commands", marocanii)
+            .addField("Server-Only Commands", clubulluimickeymouse)
             message.channel.send(marocanii1)
         } else if (message.guild.id === "745623527759282176"){//twdsv
             const twdsv = new Discord.MessageEmbed().setColor("RANDOM")

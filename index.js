@@ -81,6 +81,9 @@ if(command === 'botinfo'){
     if(command === 'poll'){
         client.commands.get('poll').execute(message, args);
     }
+    if(command === 'bingus'){
+        message.channel.send("<:bingus:829475084598509601>")
+    }
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
     } 
@@ -328,8 +331,10 @@ if(command === 'templates'){
 
 
 
+
 client.on('message',  message =>{
-    if(!message.guild.id === "786897678159052802") return;
+    if(!message.guild.id === "822458359143333998") return;
+    else{
     if (message.author.bot) return  ;
     const prefix = '-';
     if(!message.content.startsWith(prefix)) return;
@@ -340,7 +345,7 @@ client.on('message',  message =>{
 
 
     if(command === "soluția" || command === "solutia") message.channel.send("CĂCAT!")
-    if(command === "relu") message.channel.send("RELU <:RELU:803580709238865940>")
+    if(command === "relu") message.channel.send("RELU <:RELU:829684586660364338>")
     if(command === "vârstă" || command === "varsta") message.channel.send("I have 14 years old.")
     if(command === "unde") message.channel.send("Într-un CITY BREAK")
     if(command === "fall") message.channel.send("N-ai feather falling?")
@@ -355,6 +360,11 @@ client.on('message',  message =>{
     if(command === "earrape") message.channel.send("NU MAI FACEȚI EARRAPE CĂ VĂ DAU DISCONNECT!")
     if(command === "sprint") message.channel.send("AM SPRINT-UL PE CAPS")
     if(command === "sprint2") message.channel.send("șprint")
+    if(command === "dmm") message.channel.send("datenmortiimatii")
+    if(command === "omaigad") message.channel.send("OMAIGAD UITE-L PE DREAM")
+    if(command === "copil") message.channel.send("MORȚII MĂTII DE COPIL CĂCAT LA CUR")
+
+  
     if(command === "doamnă" || command === "doamna" || command === "duamna") message.channel.send("HIII, DOAMNĂ, VĂ ROG FOARTE MULT SĂ NU MAI SPUNEȚI AȘA CEVA, DAR SUNTEM LA TELEVIZOR!")
     if(command === "pupici" || command === "pulici"){
         message.channel.send("pulici")
@@ -368,6 +378,7 @@ client.on('message',  message =>{
     if(command === "ceye") message.channel.send("ye klar")
     if(command === "ceye2") message.channel.send("ayaye")
     if(command === "ceye3") message.channel.send("urît")
+    if(command === "ceye4") message.channel.send("tzeakă")
     if(command === "flash") message.channel.send("DAU FLASH")
     if(command === "edi2"){
         const edi2 = new Discord.MessageEmbed().setColor("RANDOM").setImage("https://cdn.discordapp.com/attachments/705049194682908782/809749697564377138/unknown.png")
@@ -377,4 +388,23 @@ client.on('message',  message =>{
         const edi = new Discord.MessageEmbed().setColor("RANDOM").setImage("https://cdn.discordapp.com/attachments/786897679375925260/809772995534782474/IMG-20210211-WA0004.png")
         message.channel.send(edi)
     }
+}
 });
+
+client.on('message', async message => {
+    if (message.author.bot) return  ;
+    const prefix = '-';
+    if(!message.content.startsWith(prefix)) return;
+
+    let args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+    if (!message.guild) return;
+    if(command === 'join'){
+        if (message.member.voice.channel) {
+            const connection = await message.member.voice.channel.join();
+            
+        } 
+        
+    }
+
+})
