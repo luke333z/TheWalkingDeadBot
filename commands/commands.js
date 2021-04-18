@@ -5,10 +5,14 @@ module.exports = {
     description: "Commands",
     execute(message, args){
        
-        const command = "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`, `bonk`, `remember`, `ban`, `kick`, `kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`, `avatar`, `userinfo`, `prefix`, `serverinfo`, `poll`, `botinfo`"
-        const secret = ""
+        const command = "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`, `bonk`, `remember`, `bingus`, `ban`, `kick`, `kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`, `avatar`, `userinfo`, `prefix`, `serverinfo`, `poll`, `botinfo`, `commands`, `invite`"
+        const secret = "`stop`, `radd`, `rcreate`, `calculate`, `rule`, `rule1`, `reply`"
         const twd = "`approve`, `softban`, `unban`, `request`, `templates`"
-        const clubulluimickeymouse = "`soluția/solutia`, `relu`, `vârstă/varsta`, `unde`, `fall`, `camere`, `bizon`, `pistol`, `chimie`, `senpai`, `mut`, `skribbl`, `deafen`, `earrape`, `sprint`, `sprint2`, `dmm`, `omaigad`, `copil`, `doamnă/doamna/duamna`, `pupici/pulici`, `stațipuțin/statiputin`, `ceye`, `ceye2`, `ceye3`, `ceye4`, `flash`, `edi`, `edi2`"
+        const clubulluimickeymouse = "`soluția/solutia`, `relu`, `vârstă/varsta`, `unde`, `fall`, `camere`, `bizon`, `pistol`, `chimie`, `senpai`, `mut`, `skribbl`, `skribbl2`, `skribbl3`, `skribbl4`, `deafen`, `earrape`, `sprint`, `sprint2`, `dmm`, `omaigad`, `copil`, `doamnă/doamna/duamna`, `pupici/pulici`, `stațipuțin/statiputin`, `ceye`, `ceye2`, `ceye3`, `ceye4`, `flash`, `edi`, `edi2`"
+       if(args[0] === "dev"){
+           message.channel.send(`${command}\n\n${secret}\n\n${twd}\n\n${clubulluimickeymouse}`)
+       }else{
+       
         if(message.guild.id === "822458359143333998"){//marocanii
             const marocanii1 = new Discord.MessageEmbed().setColor("RANDOM")
             .setDescription("**All Bot Commands**")
@@ -29,5 +33,6 @@ module.exports = {
             message.channel.send(non)
       
         }
+    }
     }
 }

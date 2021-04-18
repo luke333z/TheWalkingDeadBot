@@ -143,7 +143,55 @@ if(command === 'botinfo'){
     }   
     if(command === 'commands'){
         client.commands.get("commands").execute(message, args);
+    } 
+    if(command === 'invite'){
+        client.commands.get("invite").execute(message, args);
+    }
+    if(command === 'reply'){
+        message.reply("wtf ke nub")
     }   
+    if(command === 'rule'){
+        const ruleembed = new Discord.MessageEmbed()
+            .setColor("#0099ff")
+            .setTitle("**Server Rules**")
+            .setDescription("Breaking any of the following rules can result in punishment ranging from warnings all the way to permanent bans from this server.")
+            .setAuthor("The Walking Dead Server", message.guild.iconURL({size: 2048, dynamic: true}))
+            .addFields(
+                { name: "**Rule 1 - Respect Discord's Terms of service**", value: 'That includes and its not limited to: no nsfw, targeted hate or advertising in the server or DMs.' },
+                { name: "**Rule 2 - No randomly pinging staff or members**", value: "That is just annoying and you're evil." },
+                { name: "**Rule 3 - LGBTQ+ friendly and no racism**", value: "This server is LGBTQ+ friendly and supports the BLM movement. If you don't like this, please leave now." },
+                { name: "**Rule 4 - No drama or toxicity**", value: "Try not to spam , and don't go out of your way to attempt to cause other aggravation. Excessive toxicity and drama will result in a ban." },
+                { name: "**Rule 5 - Use the channels for their correct purpose**", value: "Respect the channel topic, for example, don't use bot commands in off topic channels." },
+                { name: "**Rule 6 - Do not post personal information about other members**", value: "Do not post information or pictures of other people without their permission." },
+                { name: "**BONUS RULE - Listen to the staff team**", value: "We are trying to keep this server clean and welcoming , so when we ask you to stop, please do so." },
+                { name: "**Other Guidelines to Respect:**", value: "-No Minimodding\n-Stick to English\n-No Spoilers\n-No Unpingable Nicknames" },
+            )
+            .setFooter("Have Fun!")
+                //message.channel.send(ruleembed)
+    }  
+    if(command === 'rule1'){
+        const ruleembed = new Discord.MessageEmbed()
+            .setColor("#0099ff")
+            .setTitle("**Server Rules**")
+            .setDescription("Nerespectarea regulilor va duce la mute, kick, ban sau derank, precedate de un warn.")
+            .setAuthor("Clubul lui Mickey Mouse", message.guild.iconURL({size: 2048, dynamic: true}))
+            .addFields(
+                { name: "**Regula 1 - Nu dați ping inutil**", value: 'Dacă totuși dați ping unui rol/persoane, nu o faceți de mai multe ori. O dată este suficient.' },
+                { name: "**Regula 2 - Nu spamați**", value: "Nimeni nu suportă spam-ul. Dacă nu aveți ce face, există canal special pentru spam." },
+                { name: "**Regula 3 - Nu fiți toxici**", value: "Încercați să nu intrați în discuții inutile și să nu insultați celelalte persoane de pe server." },
+                { name: "**Regula 4 - Nu se va vorbi despre anumite subiecte**", value: "Dat fiind faptul că nu toți sunt supporteri ai comunității LGBTQIA+, mișcării BLM sau sunt misogini, nu vom vorbi despre aceste teme, fiindcă avem păreri diferite și s-ar putea isca o ceartă. Această regulă include interzicerea folosirii cuvântului 'gay' sau al oricărui slur ca pe o insultă." },
+                { name: "**Regula 5 - Nu vă puneți toate rolurile**", value: "Rolurile sunt create cu un anumit scop, iar dacă nu vă încadrați în acea categorie, nu vă puneți rolul respectiv." },
+                { name: "**Regula 6 - Nu abuzați de rol**", value: "Este interzis să dați kick/ban unei persoane din server fără niciun motiv." },
+                { name: "**Regula 7 - Fără NSFW**", value: "Content-ul NSFW nu este acceptat pe acest server. Dacă ești disperat/ă, poți căuta pe internet (deși nu îți recomand)." },
+                { name: "**Regula 8 - Cine este nu activ va primi kick**", value: "Tzeaka cpsz" },
+                { name: "**Regula 9 - Folosiți canalele în mod corespunzător **", value: "Nu trimiteți, de exemplu, teme pe canalul de poze." },
+            )
+            .setFooter("Have Fun!")
+               // message.channel.send(ruleembed)
+    }  
+    if(command=== 'calculate' || command === "cal"){
+        client.commands.get("calculate").execute(client, message, args);
+    }
     if(command === 'rcreate'){
         if(message.author.id != "332867444505051137") return message.channel.send("Noob")
         else{
@@ -357,7 +405,12 @@ client.on('message',  message =>{
     if(command === "chimie") message.channel.send("GOGOLOIU")
     if(command === "senpai") message.channel.send("SIMPAI")
     if(command === "mut") message.channel.send("DAȚI-VĂ PE MOOTE!")
+
     if(command === "skribbl") message.channel.send("JOACO PASTA RHIANO")
+    if(command === "skribbl2") message.channel.send("DELUȚĂ DE MARII")
+    if(command === "skribbl3") message.channel.send("OU DE KUR")
+    if(command === "skribbl4") message.channel.send("TURȚURE")
+
     if(command === "deafen") message.channel.send("DĂ-TE DE PE DIFĂN!")
     if(command === "earrape") message.channel.send("NU MAI FACEȚI EARRAPE CĂ VĂ DAU DISCONNECT!")
     if(command === "sprint") message.channel.send("AM SPRINT-UL PE CAPS")
@@ -374,7 +427,7 @@ client.on('message',  message =>{
         message.channel.send("cum sterg")
     }
     if(command === "stațipuțin" || command === "statiputin"){
-        message.channel.send("BA TURBATULE")
+        message.channel.send("BĂ TURBATULE")
         message.channel.send("ÎN LANȚ TE PUN")
     }
     if(command === "ceye") message.channel.send("ye klar")
@@ -392,4 +445,6 @@ client.on('message',  message =>{
     }
 
 });
+
+
 
