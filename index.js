@@ -235,7 +235,7 @@ client.on('message',  message =>{
     const command = args.shift().toLowerCase();
     if (!message.guild) return;
 
-    if(!message.guild.id !== "745623527759282176") return;
+    if(message.guild.id !== "745623527759282176") return;
 
 
     if(command === 'approve'){
