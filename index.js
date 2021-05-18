@@ -150,7 +150,7 @@ if(command === 'botinfo'){
     if(command === 'reply'){
         message.reply("wtf ke nub")
     }   
-    if(command === 'rule'){
+    if(command === 'rules'){
         const ruleembed = new Discord.MessageEmbed()
             .setColor("#0099ff")
             .setTitle("**Server Rules**")
@@ -169,6 +169,9 @@ if(command === 'botinfo'){
             .setFooter("Have Fun!")
                 //message.channel.send(ruleembed)
     }  
+    if(command === 'rule'){
+        
+    }
     if(command === 'rule1'){
         const ruleembed = new Discord.MessageEmbed()
             .setColor("#0099ff")

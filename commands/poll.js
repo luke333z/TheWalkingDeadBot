@@ -12,7 +12,7 @@ module.exports = {
         .setTitle(q)
         .setDescription(`👍 -  Yes. \n\n👎 - No. `)
         .setTimestamp()
-        .setFooter(process.env.DEVELOPER);
+        .setFooter(`by ${message.author.tag}`);
         
         message.channel.send(pollEmbed).then(sentEmbed => {
             sentEmbed.react("👍");
