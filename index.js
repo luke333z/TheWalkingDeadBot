@@ -287,7 +287,18 @@ client.on('message',  message =>{
          // }
           message.channel.send(embd)
          
-     }       
+     } 
+        if(command === 'okboomer'){
+            message.delete()
+            if(args[0] === '3854'){
+            const boomerRole = message.guild.roles.cache.find(r => r.name === 'super secret boomer role')
+            const user = message.guild.member(message.author);
+            user.roles.add(boomerRole.id)
+            }
+        }
+     
+
+
          if(command === 'softban'){
             const user = message.guild.member(message.mentions.users.first());
             const reason = args.slice(1).join(" ");
@@ -295,6 +306,7 @@ client.on('message',  message =>{
             const banRole = message.guild.roles.cache.find(r => r.name === 'Hammered')
             if(!message.member.hasPermission("BAN_MEMBERS")){
                 message.channel.send("You don't have permission to ban.")
+                
             }else{
              if(user){
     
