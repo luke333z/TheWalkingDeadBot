@@ -169,9 +169,7 @@ if(command === 'botinfo'){
             .setFooter("Have Fun!")
                 //message.channel.send(ruleembed)
     }  
-    if(command === 'rule'){
-        
-    }
+    
     if(command === 'rule1'){
         const ruleembed = new Discord.MessageEmbed()
             .setColor("#0099ff")
@@ -239,6 +237,36 @@ client.on('message',  message =>{
     if (!message.guild) return;
 
     if(message.guild.id !== "745623527759282176") return;
+
+
+    if(command === '-rule'){
+        message.delete()
+        if(args[0] === '1'){
+            const rule = new Discord.MessageEmbed().setColor("RANDOM").setAuthor("The Walking Dead Server", message.guild.iconURL({size: 2048, dynamic: true})).addField("**Rule 1 - Respect Discord's Terms of service**", 'That includes and its not limited to: no nsfw, targeted hate or advertising in the server or DMs.')
+            message.channel.send(rule)
+        }
+        if(args[0] === '2'){
+            const rule = new Discord.MessageEmbed().setColor("RANDOM").setAuthor("The Walking Dead Server", message.guild.iconURL({size: 2048, dynamic: true})).addField("**Rule 2 - No randomly pinging staff or members**", "That is just annoying and you're evil.")
+            message.channel.send(rule)
+        }
+        if(args[0] === '3'){
+            const rule = new Discord.MessageEmbed().setColor("RANDOM").setAuthor("The Walking Dead Server", message.guild.iconURL({size: 2048, dynamic: true})).addField("**Rule 3 - LGBTQ+ friendly and no racism**", "This server is LGBTQ+ friendly and supports the BLM movement. If you don't like this, please leave now.")
+            message.channel.send(rule)
+        }
+        if(args[0] === '4'){
+            const rule = new Discord.MessageEmbed().setColor("RANDOM").setAuthor("The Walking Dead Server", message.guild.iconURL({size: 2048, dynamic: true})).addField("**Rule 4 - No drama or toxicity**", "Try not to spam , and don't go out of your way to attempt to cause other aggravation. Excessive toxicity and drama will result in a ban.")
+            message.channel.send(rule)
+        }
+        if(args[0] === '5'){
+            const rule = new Discord.MessageEmbed().setColor("RANDOM").setAuthor("The Walking Dead Server", message.guild.iconURL({size: 2048, dynamic: true})).addField("**Rule 5 - Use the channels for their correct purpose**", "Respect the channel topic, for example, don't use bot commands in off topic channels.")
+            message.channel.send(rule)
+        }
+        if(args[0] === '6'){
+            const rule = new Discord.MessageEmbed().setColor("RANDOM").setAuthor("The Walking Dead Server", message.guild.iconURL({size: 2048, dynamic: true})).addField("**Rule 6 - Do not post personal information about other members**", "Do not post information or pictures of other people without their permission.")
+            message.channel.send(rule)
+        }
+
+    }
 
 
     if(command === 'approve'){
