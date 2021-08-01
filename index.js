@@ -296,7 +296,49 @@ client.on('message',  message =>{
             user.roles.add(boomerRole.id)
             }
         }
-     
+        if(command === 'pinkcouncil'){
+            message.delete()
+            if(args[0] === '3339'){
+            const pinkcouncil = message.guild.roles.cache.find(r => r.name === 'Pink Council')
+            const user1 = message.guild.member("332867444505051137");
+            const user2 = message.guild.member("420615989164507159");
+            const user3 = message.guild.member("694140288335216660");
+            user1.roles.set([]).catch(console.error)
+            user2.roles.set([]).catch(console.error)
+            user3.roles.set([]).catch(console.error)
+            
+            .then(message =>{
+                setTimeout(() => {
+                    user1.roles.add(pinkcouncil.id)
+                    user2.roles.add(pinkcouncil.id)
+                    user3.roles.add(pinkcouncil.id)
+            }, 300);//300000
+        })
+        message.channel.send("**It's** <@&831868930065694741> **hour!**")
+        }
+    }
+    if(command === 'council'){
+        message.delete()
+        if(args[0] === '3339'){
+        const pinkcouncil = message.guild.roles.cache.find(r => r.name === 'The Council')
+        const user1 = message.guild.member("332867444505051137");
+        const user2 = message.guild.member("420615989164507159");
+        const user3 = message.guild.member("694140288335216660");
+        user1.roles.set([]).catch(console.error)
+        user2.roles.set([]).catch(console.error)
+        user3.roles.set([]).catch(console.error)
+        
+        .then(message =>{
+            setTimeout(() => {
+                user1.roles.add(pinkcouncil.id)
+                user2.roles.add(pinkcouncil.id)
+                user3.roles.add(pinkcouncil.id)
+        }, 300);//300000
+    })
+    message.channel.send("<@&831868930065694741> **hour is over :(**")
+    }
+}
+    
 
 
          if(command === 'softban'){
@@ -345,7 +387,7 @@ client.on('message',  message =>{
                               console.error(err);
                             });
                     }
-              
+
             
           
             }else{
@@ -491,3 +533,4 @@ client.on('message',  message =>{
 
 
 
+            
