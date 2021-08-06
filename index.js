@@ -78,6 +78,9 @@ client.on('message', message =>{
 if(command === 'botinfo'){
     client.commands.get('botinfo').execute(message, args, prefix);
 }
+if(command === 'suggest'){
+    client.commands.get('suggest').execute(message, args, prefix);
+}
     if(command === 'poll'){
         client.commands.get('poll').execute(message, args);
     }
