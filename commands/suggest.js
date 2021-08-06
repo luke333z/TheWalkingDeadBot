@@ -5,6 +5,7 @@ module.exports = {
     description: "Suggest something.",
     execute(message, args){
         const msg = args.slice(0).join(" ");
+        if(!msg) return;
        const suggest = new Discord.MessageEmbed()
        .setColor("RANDOM")
         .setDescription(`<@${message.author.id}> suggests:`)
