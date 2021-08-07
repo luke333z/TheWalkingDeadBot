@@ -5,8 +5,37 @@ module.exports = {
     name: 'loot',
     description: "Random loot command",
     execute(message, args){
-        fs.readFile('./random_stuff.txt', 'utf8', (err, data) => {
+        let rarity = Math.floor(Math.random() * 99);
+        let file
+        let rarity1 
+        let color
+       console.log(rarity)
+        if ( rarity < 50){ // 0 -> 49 50%
+             file = `./common.txt`
+             color = "#808080"
+             rarity1 = "Common Loot"
+        } else if (rarity < 85){  // 50 -> 84 35%
+             file = `./rare.txt`
+             color = "#000399"
+             rarity1 = "Rare Loot"
+        } else if (rarity < 98){ // 85 -> 98 14% 
+             file = `./epic.txt`
+             color = "#5e0099"
+             rarity1 = "Epic Loot"
+        }else {// 1%
+             file = `./legendary.txt`
+             color = "#def200"
+             rarity1 = "Legendary Loot"
+        }
+
+        console.log(file)
+            
+
+
+
+        fs.readFile(file , 'utf8', (err, data) => {
             if(err) return console.log(err)
+            
             
             function cLog(msg) {
                 return console.log(msg);
@@ -29,10 +58,12 @@ module.exports = {
             var module = loot.split('^')
             
             /*
+                module[0]=category
                 module[1]=name
                 module[2], module[2]=min and max number
                 module[4], module[5]=durability/quality max and min
                 module[6]= Durability/Quality
+                module[7] = icon
 
             */
            let num1 = parseInt(module[2], 10); 
@@ -42,14 +73,32 @@ module.exports = {
             if(module[2]==module[3]){
                 //only one object
                 if(!module[6]){
-                    cLog("Path 1a")
-                    const path1a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + module[1] + "`", `Category: ${module[0]} \nCount: 1` ).setTimestamp() 
-                    message.channel.send(path1a)
+                        cLog("Path 1a")
+                        
+                        const path1a = new Discord.MessageEmbed()
+                        .setColor(color)
+                        .setAuthor(rarity1)
+                        .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
+                        .addField(`Category:`, `**Count:**`, true )
+                        .addField("`" + `${module[0]}` + "`" , "`1`" ,true )
+                        .setTimestamp() 
+                   
+                        message.channel.send(path1a)
                 } else {
-                         let dur =getRandomInt(dur1,dur2);
-                       cLog("Path 1b");
-                       const path2a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + module[1] + "`", `Category: ${module[0]} \nCount: 1\n${module[6]}: ${dur}%` ).setTimestamp()
-                      message.channel.send(path2a);
+                        let dur =getRandomInt(dur1,dur2);
+                        cLog("Path 1b");
+                       
+                        const path2a = new Discord.MessageEmbed()
+                        .setColor(color)
+                        .setAuthor(rarity1)
+                        .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
+                        .addField(`Category:`, `**Count:**`, true )
+                        .addField("`" + `${module[0]}` + "`" , "`1`" ,true )
+                        .addField(`${module[6]}:`, dur)
+                        
+                        .setTimestamp()
+                        
+                        message.channel.send(path2a);
                 }
             }else{
                
@@ -60,12 +109,26 @@ module.exports = {
                     if(n==1){
                         //one object
                         cLog("Path 2a")
-                        const path2a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + module[1] + "`", `Category: ${module[0]} \nCount: ${n}` ).setTimestamp()
-                    message.channel.send(path2a)
+                       
+                        const path2a = new Discord.MessageEmbed()
+                        .setColor(color)
+                        .setAuthor(rarity1)
+                        .setDescription(`**${message.author.username} just found:**\n`)
+                        .addField("`" + module[1] + "`", `Category: ${module[0]} \nCount: ${n}` )
+                        .setTimestamp()
+                    
+                        message.channel.send(path2a)
                     }else{
                         //more objects
-                        const path2b = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + module[1] + "`", `Category: ${module[0]} \nCount: ${n}` ).setTimestamp()
                         cLog("Path 2b")
+
+                        const path2b = new Discord.MessageEmbed()
+                        .setColor(color)
+                        .setAuthor(rarity1)
+                        .setDescription(`**${message.author.username} just found:**\n`)
+                        .addField("`" + module[1] + "`", `Category: ${module[0]} \nCount: ${n}` )
+                        .setTimestamp()
+                      
                         message.channel.send(path2b)
                     }
                 }else if(module[6]){
@@ -75,22 +138,31 @@ module.exports = {
                     
                      if(n==1){
                         //one object
-                        const path3a = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + module[1] + "`", `Category: ${module[0]} \nCount: ${n}\n${module[6]}: ${dur}%` ).setTimestamp() 
                         cLog("Path 3a")
+
+                        const path3a = new Discord.MessageEmbed()
+                        .setColor(color)
+                        .setAuthor(rarity1)
+                        .setDescription(`**${message.author.username} just found:**\n`)
+                        .addField("`" + module[1] + "`", `Category: ${module[0]} \nCount: ${n}\n${module[6]}: ${dur}%` )
+                        .setTimestamp() 
+                        
                         message.channel.send(path3a)
                     }else{
                         //more objects
-                        const path3b = new Discord.MessageEmbed().setColor("RANDOM").setDescription(`**${message.author.username} just found:**\n`).addField("`" + module[1] + "`", `Category: ${module[0]} \nCount: ${n}\n${module[6]}: ${dur}%` ).setTimestamp() 
                         cLog("Path 3b")
+
+                        const path3b = new Discord.MessageEmbed()
+                        .setColor(color)
+                        .setAuthor(rarity1)
+                        .setDescription(`**${message.author.username} just found:**\n`)
+                        .addField("`" + module[1] + "`", `Category: ${module[0]} \nCount: ${n}\n${module[6]}: ${dur}%` )
+                        .setTimestamp() 
+                        
                         message.channel.send(path3b)
-                    }
-                   
-                   
+                    } 
               }
             }
-            
-            
-     
         })
     }
 }

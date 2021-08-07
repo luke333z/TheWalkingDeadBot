@@ -44,7 +44,7 @@ client.on('message', message =>{
         }
     }
    
-    if(command === 'loot1'){
+    if(command === 'loot2'){
         client.commands.get('loot').execute(message, args);
     }
     if(command === 'simp'){
