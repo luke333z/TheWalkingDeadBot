@@ -9,7 +9,7 @@ module.exports = {
         let file
         let rarity1 
         let color
-       console.log(rarity)
+
         if ( rarity < 50){ // 0 -> 49 50%
              file = `./common.txt`
              color = "#808080"
@@ -28,7 +28,7 @@ module.exports = {
              rarity1 = "Legendary Loot"
         }
 
-        console.log(file)
+        console.log(rarity1)
             
 
 
@@ -71,7 +71,7 @@ module.exports = {
            let dur1 = parseInt(module[4], 10); 
            let dur2 = parseInt(module[5], 10)
             if(module[2]==module[3]){
-                //only one object
+                //set amount of objects
                 if(!module[6]){
                         cLog("Path 1a")
                         
@@ -94,73 +94,49 @@ module.exports = {
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
                         .addField(`Category:`, `**Count:**`, true )
                         .addField("`" + `${module[0]}` + "`" , "`1`" ,true )
-                        .addField(`${module[6]}:`, dur)
-                        
+                        .addField(`${module[6]}:`, dur+ `%`)
                         .setTimestamp()
                         
                         message.channel.send(path2a);
                 }
             }else{
-               
+               //random amount of loot
                 let n =getRandomInt(num1,num2)
                
                 if(!module[6]){
                     //no durability
-                    if(n==1){
-                        //one object
-                        cLog("Path 2a")
-                       
-                        const path2a = new Discord.MessageEmbed()
-                        .setColor(color)
-                        .setAuthor(rarity1)
-                        .setDescription(`**${message.author.username} just found:**\n`)
-                        .addField("`" + module[1] + "`", `Category: ${module[0]} \nCount: ${n}` )
-                        .setTimestamp()
                     
-                        message.channel.send(path2a)
-                    }else{
-                        //more objects
-                        cLog("Path 2b")
+                        cLog("Path 2")
 
                         const path2b = new Discord.MessageEmbed()
                         .setColor(color)
                         .setAuthor(rarity1)
-                        .setDescription(`**${message.author.username} just found:**\n`)
-                        .addField("`" + module[1] + "`", `Category: ${module[0]} \nCount: ${n}` )
-                        .setTimestamp()
+                        .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
+                        .addField(`Category:`, `**Count:**`, true )
+                        .addField("`" + `${module[0]}` + n , "`1`" ,true )
+                        .setTimestamp() 
                       
                         message.channel.send(path2b)
-                    }
+                    
                 }else if(module[6]){
                      //durability
 
                      let dur =getRandomInt(dur1,dur2)
                     
-                     if(n==1){
-                        //one object
-                        cLog("Path 3a")
-
-                        const path3a = new Discord.MessageEmbed()
-                        .setColor(color)
-                        .setAuthor(rarity1)
-                        .setDescription(`**${message.author.username} just found:**\n`)
-                        .addField("`" + module[1] + "`", `Category: ${module[0]} \nCount: ${n}\n${module[6]}: ${dur}%` )
-                        .setTimestamp() 
                         
-                        message.channel.send(path3a)
-                    }else{
-                        //more objects
-                        cLog("Path 3b")
+                        cLog("Path 3")
 
                         const path3b = new Discord.MessageEmbed()
                         .setColor(color)
                         .setAuthor(rarity1)
-                        .setDescription(`**${message.author.username} just found:**\n`)
-                        .addField("`" + module[1] + "`", `Category: ${module[0]} \nCount: ${n}\n${module[6]}: ${dur}%` )
-                        .setTimestamp() 
+                        .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
+                        .addField(`Category:`, `**Count:**`, true )
+                        .addField("`" + `${module[0]}` + "`" , n ,true )
+                        .addField(`${module[6]}:`, dur+ `%`)
+                        .setTimestamp()
                         
                         message.channel.send(path3b)
-                    } 
+                    
               }
             }
         })
