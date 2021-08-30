@@ -94,7 +94,7 @@ module.exports = {
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
                         .addField(`Category:`, "`" + `${module[0]}` + "`", true )
                         .addField( `Count:`, "`1`" ,true )
-                        .addField(`${module[6]}:`, dur+ `%`)
+                        .addField(`${module[6]}:`, "`" +ssdur+ "%`")
                         .setTimestamp()
                         
                         message.channel.send(path2a);
@@ -113,7 +113,7 @@ module.exports = {
                         .setAuthor(rarity1)
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
                         .addField(`Category:`, "`" + `${module[0]}` + "`", true )
-                        .addField( `Count:`, "`" , "`" + n + "`" ,true )
+                        .addField( `Count:` , "`" + n + "`" ,true )
                         .setTimestamp() 
                       
                         message.channel.send(path2b)
@@ -132,7 +132,7 @@ module.exports = {
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
                         .addField(`Category:`, "`" + `${module[0]}` + "`", true )
                         .addField( `Count:`, "`" + n + "`" ,true )
-                        .addField(`${module[6]}:`, dur+ `%`)
+                        .addField(`${module[6]}:`, "`" +dur+ "%`")
                         .setTimestamp()
                         
                         message.channel.send(path3b)
