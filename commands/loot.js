@@ -131,7 +131,7 @@ module.exports = {
                         .setAuthor(rarity1)
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
                         .addField(`Category:`, "`" + `${module[0]}` + "`", true )
-                        .addField( `Count:`, "`" , "`" + n + "`" ,true )
+                        .addField( `Count:`, "`" + n + "`" ,true )
                         .addField(`${module[6]}:`, dur+ `%`)
                         .setTimestamp()
                         
