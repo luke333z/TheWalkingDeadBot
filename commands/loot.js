@@ -113,7 +113,7 @@ module.exports = {
                         .setAuthor(rarity1)
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
                         .addField(`Category:`, `**Count:**`, true )
-                        .addField("`" + `${module[0]}` + n , "`1`" ,true )
+                        .addField("`" + `${module[0]}` + "`" , "`" + n + "`" ,true )
                         .setTimestamp() 
                       
                         message.channel.send(path2b)
@@ -131,7 +131,7 @@ module.exports = {
                         .setAuthor(rarity1)
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
                         .addField(`Category:`, `**Count:**`, true )
-                        .addField("`" + `${module[0]}` + "`" , n ,true )
+                        .addField("`" + `${module[0]}` + "`" , "`" + n + "`" ,true )
                         .addField(`${module[6]}:`, dur+ `%`)
                         .setTimestamp()
                         
