@@ -4,21 +4,23 @@ module.exports = {
     name: 'f',
     description: "Pay your respects.",
     execute(message, args){
-        const negan = args.slice(0).join(" ");
-        if(!negan){
+        const reason = args.slice(0).join(" ");
+        if(!reason){
+
         const fEmbed = new Discord.MessageEmbed()
         .setColor("RANDOM")
         .setDescription(`${message.author.username}` + ` has paid their respects.`)
         .setTimestamp()
         .setFooter(process.env.DEVELOPER)
+
         message.channel.send(fEmbed);
         } else {
-            const neganEmbed = new Discord.MessageEmbed()
+            const fEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")
-            .setDescription(`${message.author.username}` + ` has paid their respects for **${negan}**.`)
+            .setDescription(`${message.author.username}` + ` has paid their respects for **${reason}**.`)
             .setTimestamp()
             .setFooter(process.env.DEVELOPER)
-            message.channel.send(neganEmbed);
+            message.channel.send(fEmbed);
         }
     }
 }

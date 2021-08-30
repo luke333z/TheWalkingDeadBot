@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
 require('dotenv').config()
+
 client.login("NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g");
 //process.env.token
 //"NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g"
@@ -28,7 +29,7 @@ client.once('ready', () => {
 client.on('message', message =>{
     
     if (message.author.bot) return  ;
-    const prefix = db.get(`guild_${message.guild.id}_prefix`) || '-';
+    const prefix = '-';
     if(!message.content.startsWith(prefix)) return;
 
     let args = message.content.slice(prefix.length).split(/ +/);
@@ -44,7 +45,7 @@ client.on('message', message =>{
         }
     }
    
-    if(command === 'loot2'){
+    if(command === 'loot'){
         client.commands.get('loot').execute(message, args);
     }
     if(command === 'simp'){
@@ -56,23 +57,7 @@ client.on('message', message =>{
     if(command === 'serverinfo'){
         client.commands.get('serverinfo').execute(message, args);
     }
-    if(command === 'prefix'){
-        
-        if(args[0] === 'set'){
-            if(!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send(`You don't have permission to do this!`);
-            if(args[1] === prefix) return message.channel.send('This is already your prefix.');
-            if(args[1] === '-') db.delete(`guild_${message.guild.id}_prefix`);
-            db.set(`guild_${message.guild.id}_prefix`, args[1]);
-            const prefixset = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix set!**').setDescription(`Your new prefix is ${args[1]}`).setTimestamp().setFooter(process.env.DEVELOPER);
-            return message.channel.send(prefixset)
-        }else if(!args[0]){
-            const noargs = new Discord.MessageEmbed().setColor('RANDOM').setTitle('**Prefix**').setDescription(`Your prefix is ${prefix}`).setTimestamp().setFooter(process.env.DEVELOPER);
-            return message.channel.send(noargs);
-        }else{
-            const prefix1 = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-prefix [set] [NewPrefix]`", "Sets a new prefix.").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
-            message.channel.send(prefix1);
-        }
-}
+    
 
 
 if(command === 'botinfo'){
@@ -242,7 +227,7 @@ client.on('message',  message =>{
     if(message.guild.id !== "745623527759282176") return;
 
 
-    if(command === '-rule'){
+    if(command === 'rule'){
         message.delete()
         if(args[0] === '1'){
             const rule = new Discord.MessageEmbed().setColor("RANDOM").setAuthor("The Walking Dead Server", message.guild.iconURL({size: 2048, dynamic: true})).addField("**Rule 1 - Respect Discord's Terms of service**", 'That includes and its not limited to: no nsfw, targeted hate or advertising in the server or DMs.')
@@ -272,25 +257,7 @@ client.on('message',  message =>{
     }
 
 
-    if(command === 'approve'){
-        
-        message.delete()
-         let user =message.mentions.users.first().username;
-          let hi = args.slice(1).join(" ");
-          if(!user || !hi) return;
-          const embd = new Discord.MessageEmbed()
-          .setTitle(`${user}'s OC has been approved!`)
-          .setDescription(hi)
-          .setFooter("Twd Server Manager")
-          .setTimestamp();
-         // if(message.author.id === message.mentions.users.first().id){
-            //  message.channel.send("You can't approve your own OC.")
-            //  return;
-              
-         // }
-          message.channel.send(embd)
-         
-     } 
+   
         if(command === 'okboomer'){
             message.delete()
             if(args[0] === '3854'){

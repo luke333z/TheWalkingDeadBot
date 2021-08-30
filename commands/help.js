@@ -89,10 +89,7 @@ module.exports = {
             const random = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-random [number]`", "A random number.").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
             message.channel.send(random);
         }
-        if(args[0] === "prefix"){
-            const prefix = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-prefix [set] [NewPrefix]`", "Sets a new prefix.").setFooter(`${process.env.DEVELOPER} • ()-required arguments, []-optional arguments`);
-            message.channel.send(prefix);
-        }
+        
             if(args[0] === "serverinfo"){
                 const serverinfo = new Discord.MessageEmbed().setColor("RANDOM").addField("**Usage:** `-serverinfo`", "Server information.").setFooter(`${process.env.DEVELOPER} •`);
                 message.channel.send(serverinfo);
@@ -133,7 +130,7 @@ module.exports = {
             .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`, `bonk`, `remember`, `bingus`")
             .addField("**MODERATION**", "`ban`, `kick`")
             .addField("**GIFS**", "`kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`")
-            .addField("**UTIL**", "`avatar`, `userinfo`, `prefix`, `serverinfo`, `poll`, `botinfo`, `commands`, `invite`, `suggest`")
+            .addField("**UTIL**", "`avatar`, `userinfo`, `serverinfo`, `poll`, `botinfo`, `commands`, `invite`, `suggest`")
             .addField("**ROLEPLAY**", "`loot`")
             .addField("**Use `-help <Commmand>` for more information about a command.**", "**Example:** \n`-help avatar` for more info about the avatar command.")
             .addField("Useful links:", "[Invite Me](https://discord.com/api/oauth2/authorize?client_id=748105665301708883&permissions=8&scope=bot), [The Walking Dead Server](https://discord.gg/pqckK8q)")

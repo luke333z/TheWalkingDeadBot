@@ -5,9 +5,9 @@ module.exports = {
     description: "Commands",
     execute(message, args){
        
-        const command = "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`, `bonk`, `remember`, `bingus`, `ban`, `kick`, `kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`, `avatar`, `userinfo`, `prefix`, `serverinfo`, `poll`, `botinfo`, `commands`, `invite`"
+        const command = "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`, `bonk`, `remember`, `bingus`, `ban`, `kick`, `kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`, `avatar`, `userinfo`, `serverinfo`, `poll`, `botinfo`, `commands`, `invite`, `suggest`"
         const secret = "`stop`, `radd`, `rcreate`, `calculate`, `rule`, `rule1`, `reply`"
-        const twd = "`approve`, `softban`, `unban`, `request`, `templates`"
+        const twd = "`softban`, `unban`, `rule`, `templates`"
         const clubulluimickeymouse = "`soluția/solutia`, `relu`, `vârstă/varsta`, `unde`, `fall`, `camere`, `bizon`, `pistol`, `chimie`, `senpai`, `mut`, `skribbl`, `skribbl2`, `skribbl3`, `skribbl4`, `deafen`, `earrape`, `sprint`, `sprint2`, `dmm`, `omaigad`, `copil`, `doamnă/doamna/duamna`, `pupici/pulici`, `stațipuțin/statiputin`, `ceye`, `ceye2`, `ceye3`, `ceye4`, `flash`, `edi`, `edi2`"
        if(args[0] === "dev"){
            message.channel.send(`${command}\n\n${secret}\n\n${twd}\n\n${clubulluimickeymouse}`)
