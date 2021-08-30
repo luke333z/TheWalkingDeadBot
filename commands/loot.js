@@ -112,8 +112,8 @@ module.exports = {
                         .setColor(color)
                         .setAuthor(rarity1)
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
-                        .addField(`Category:`, `**Count:**`, true )
-                        .addField("`" + `${module[0]}` + "`" , "`" + n + "`" ,true )
+                        .addField(`Category:`, "`" + `${module[0]}` + "`", true )
+                        .addField( `Count:`, "`" , "`" + n + "`" ,true )
                         .setTimestamp() 
                       
                         message.channel.send(path2b)
@@ -130,8 +130,8 @@ module.exports = {
                         .setColor(color)
                         .setAuthor(rarity1)
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
-                        .addField(`Category:`, `**Count:**`, true )
-                        .addField("`" + `${module[0]}` + "`" , "`" + n + "`" ,true )
+                        .addField(`Category:`, "`" + `${module[0]}` + "`", true )
+                        .addField( `Count:`, "`" , "`" + n + "`" ,true )
                         .addField(`${module[6]}:`, dur+ `%`)
                         .setTimestamp()
                         
