@@ -82,6 +82,7 @@ module.exports = {
                         .addField(`Category:`, "`" + `${module[0]}` + "`"  , true )
                         .addField(`Count:` , "`1`" ,true )
                         .setTimestamp() 
+                        .setThumbnail(URL=module[7])
                    
                         message.channel.send(path1a)
                 } else {
@@ -96,6 +97,7 @@ module.exports = {
                         .addField( `Count:`, "`1`" ,true )
                         .addField(`${module[6]}:`, "`" +dur+ "%`")
                         .setTimestamp()
+                        .setThumbnail(URL=module[7])
                         
                         message.channel.send(path2a);
                 }
@@ -115,6 +117,7 @@ module.exports = {
                         .addField(`Category:`, "`" + `${module[0]}` + "`", true )
                         .addField( `Count:` , "`" + n + "`" ,true )
                         .setTimestamp() 
+                        .setThumbnail(URL=module[7])
                       
                         message.channel.send(path2b)
                     
@@ -134,6 +137,7 @@ module.exports = {
                         .addField( `Count:`, "`" + n + "`" ,true )
                         .addField(`${module[6]}:`, "`" +dur+ "%`")
                         .setTimestamp()
+                        .setThumbnail(URL=module[7])
                         
                         message.channel.send(path3b)
                     
