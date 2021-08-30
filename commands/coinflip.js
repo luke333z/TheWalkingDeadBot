@@ -16,7 +16,7 @@ module.exports = {
             const tailsEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")
             .setDescription( `**Tails!**` )
-            .setThumbnail("https://cdn.discordapp.com/attachments/705049194682908782/881863209307471872/Tails.gif")
+            .setImage("https://cdn.discordapp.com/attachments/705049194682908782/881863209307471872/Tails.gif")
             .setTimestamp()
             .setFooter(process.env.DEVELOPER)
     
@@ -26,7 +26,7 @@ module.exports = {
         const headsEmbed = new Discord.MessageEmbed()
         .setColor("RANDOM")
         .setDescription( `**Heads!**` )
-        .setThumbnail("https://cdn.discordapp.com/attachments/705049194682908782/881863195462103070/Heads.gif")
+        .setImage("https://cdn.discordapp.com/attachments/705049194682908782/881863195462103070/Heads.gif")
         .setTimestamp()
         .setFooter(process.env.DEVELOPER)
             message.channel.send(headsEmbed);
