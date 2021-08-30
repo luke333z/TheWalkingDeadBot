@@ -94,7 +94,7 @@ module.exports = {
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
                         .addField(`Category:`, "`" + `${module[0]}` + "`", true )
                         .addField( `Count:`, "`1`" ,true )
-                        .addField(`${module[6]}:`, "`" +ssdur+ "%`")
+                        .addField(`${module[6]}:`, "`" +dur+ "%`")
                         .setTimestamp()
                         
                         message.channel.send(path2a);
