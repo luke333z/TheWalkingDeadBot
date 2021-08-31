@@ -125,7 +125,7 @@ module.exports = {
             const helpEmbed = new Discord.MessageEmbed()
             .setTitle("Hello!")
             .setColor("RANDOM")
-            .setDescription("Below you can see all the things I'm programmed to do.\n If you need any more help send a message to @luke.#8235.")
+            .setDescription(`Below you can see all the things I'm programmed to do.\n If you need any more help send a message to ${process.env.DEVELOPER}.`)
             .addField("__**COMMANDS**__", "\u200b")
             .addField("**FUN**", "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`, `bonk`, `remember`, `bingus`")
             .addField("**MODERATION**", "`ban`, `kick`")
