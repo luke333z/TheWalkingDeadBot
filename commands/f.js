@@ -8,7 +8,7 @@ module.exports = {
         if(!reason){
 
         const fEmbed = new Discord.MessageEmbed()
-        .setColor("RANDOM")
+        .setColor("#FFD700")
         .setDescription(`${message.author.username}` + ` has paid their respects.`)
         .setTimestamp()
         .setFooter(process.env.DEVELOPER)
@@ -16,7 +16,7 @@ module.exports = {
         message.channel.send(fEmbed);
         } else {
             const fEmbed = new Discord.MessageEmbed()
-            .setColor("RANDOM")
+            .setColor("#FFD700")
             .setDescription(`${message.author.username}` + ` has paid their respects for **${reason}**.`)
             .setTimestamp()
             .setFooter(process.env.DEVELOPER)
