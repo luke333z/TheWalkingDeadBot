@@ -81,6 +81,7 @@ module.exports = {
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
                         .addField(`Category:`, `**Count:**`, true )
                         .addField("`" + `${module[0]}` + "`" , "`1`" ,true )
+                        .setThumbnail("https://cdn.discordapp.com/attachments/873556630535544915/880409004340293672/unknown.png")
                         .setTimestamp() 
                    
                         message.channel.send(path1a)
@@ -95,6 +96,7 @@ module.exports = {
                         .addField(`Category:`, `**Count:**`, true )
                         .addField("`" + `${module[0]}` + "`" , "`1`" ,true )
                         .addField(`${module[6]}:`, dur+ `%`)
+                        .setImage(module[7])
                         .setTimestamp()
                         
                         message.channel.send(path2a);
@@ -114,6 +116,7 @@ module.exports = {
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
                         .addField(`Category:`, `**Count:**`, true )
                         .addField("`" + `${module[0]}` + "`" , "`" + n + "`" ,true )
+                        .setImage(module[7])
                         .setTimestamp() 
                       
                         message.channel.send(path2b)
@@ -133,6 +136,7 @@ module.exports = {
                         .addField(`Category:`, `**Count:**`, true )
                         .addField("`" + `${module[0]}` + "`" , "`" + n + "`" ,true )
                         .addField(`${module[6]}:`, dur+ `%`)
+                        .setImage(module[7])
                         .setTimestamp()
                         
                         message.channel.send(path3b)

@@ -21,14 +21,15 @@ for(const file of commandFiles){
 
 client.once('ready', () => {
     console.log('TWDBot is online!');
+    client.user.setStatus("idle")
     client.user.setUsername("TheWalkingDeadBot")
-    client.user.setActivity('The Walking Dead', {type: 'WATCHING'}).catch(console.error);
+    client.user.setActivity('Goodbye :(', {type: 'PLAYING'}).catch(console.error);
 });
 
 client.on('message', message =>{
     
     if (message.author.bot) return  ;
-    const prefix = db.get(`guild_${message.guild.id}_prefix`) || '-';
+    const prefix = db.get(`guild_${message.guild.id}_prefix`) || 'wasdwasd';
     if(!message.content.startsWith(prefix)) return;
 
     let args = message.content.slice(prefix.length).split(/ +/);
