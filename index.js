@@ -22,12 +22,29 @@ for(const file of commandFiles){
 
 client.once('ready', () => {
     console.log('TWDBot is online!');
-    client.user.setStatus("idle")
+    client.user.setStatus("dnd")
     client.user.setUsername("TheWalkingDeadBot")
     client.user.setActivity('Goodbye :(', {type: 'PLAYING'}).catch(console.error);
 });
 
 client.on('message', message =>{
+    
+    if (message.author.bot) return  ;
+    const prefix = '-';
+    if(!message.content.startsWith(prefix)) return;
+
+    let args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+    if (!message.guild) return;
+
+
+    if(command === 'f'){
+        client.commands.get('f').execute(message, args);
+    }
+
+
+});
+/*client.on('message', message =>{
     
     if (message.author.bot) return  ;
     const prefix = '-';
@@ -500,7 +517,7 @@ client.on('message',  message =>{
         message.channel.send(edi)
     }
 
-});
+});*/
 
 
 
