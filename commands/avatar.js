@@ -7,10 +7,11 @@ module.exports = {
         const user = message.mentions.users.first() || message.author;
         const avatarEmbed = new Discord.MessageEmbed()
         .setColor("RANDOM")
-        .setAuthor(user.tag)
+        .setDescription(`[${user.tag}](${user.displayAvatarURL({size: 2048, dynamic: true})})`)
         .setImage(user.displayAvatarURL({size: 2048, dynamic: true}))
         .setTimestamp()
         .setFooter(process.env.DEVELOPER);
+        
         message.channel.send(avatarEmbed);
     }
 }

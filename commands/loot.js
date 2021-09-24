@@ -79,10 +79,10 @@ module.exports = {
                         .setColor(color)
                         .setAuthor(rarity1)
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
-                        .addField(`Category:`, `**Count:**`, true )
-                        .addField("`" + `${module[0]}` + "`" , "`1`" ,true )
-                        .setThumbnail("https://cdn.discordapp.com/attachments/873556630535544915/880409004340293672/unknown.png")
+                        .addField(`Category:`, "`" + `${module[0]}` + "`"  , true )
+                        .addField(`Count:` , "`1`" ,true )
                         .setTimestamp() 
+                        .setThumbnail(URL=module[7])
                    
                         message.channel.send(path1a)
                 } else {
@@ -93,11 +93,11 @@ module.exports = {
                         .setColor(color)
                         .setAuthor(rarity1)
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
-                        .addField(`Category:`, `**Count:**`, true )
-                        .addField("`" + `${module[0]}` + "`" , "`1`" ,true )
-                        .addField(`${module[6]}:`, dur+ `%`)
-                        .setImage(module[7])
+                        .addField(`Category:`, "`" + `${module[0]}` + "`", true )
+                        .addField( `Count:`, "`1`" ,true )
+                        .addField(`${module[6]}:`, "`" +dur+ "%`")
                         .setTimestamp()
+                        .setThumbnail(URL=module[7])
                         
                         message.channel.send(path2a);
                 }
@@ -114,10 +114,10 @@ module.exports = {
                         .setColor(color)
                         .setAuthor(rarity1)
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
-                        .addField(`Category:`, `**Count:**`, true )
-                        .addField("`" + `${module[0]}` + "`" , "`" + n + "`" ,true )
-                        .setImage(module[7])
+                        .addField(`Category:`, "`" + `${module[0]}` + "`", true )
+                        .addField( `Count:` , "`" + n + "`" ,true )
                         .setTimestamp() 
+                        .setThumbnail(URL=module[7])
                       
                         message.channel.send(path2b)
                     
@@ -133,11 +133,11 @@ module.exports = {
                         .setColor(color)
                         .setAuthor(rarity1)
                         .setDescription(`**${message.author.username} just found:**\n` + "`" + `${module[1]}` + "`")
-                        .addField(`Category:`, `**Count:**`, true )
-                        .addField("`" + `${module[0]}` + "`" , "`" + n + "`" ,true )
-                        .addField(`${module[6]}:`, dur+ `%`)
-                        .setImage(module[7])
+                        .addField(`Category:`, "`" + `${module[0]}` + "`", true )
+                        .addField( `Count:`, "`" + n + "`" ,true )
+                        .addField(`${module[6]}:`, "`" +dur+ "%`")
                         .setTimestamp()
+                        .setThumbnail(URL=module[7])
                         
                         message.channel.send(path3b)
                     

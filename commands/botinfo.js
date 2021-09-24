@@ -15,7 +15,7 @@ module.exports = {
                 
                 .addField(`__**My developers:**__`, "Lead developer - luke.#3908\nDeveloper - EfectivRhiana#0721")
                 .addField(`__**Special thanks to:**__`, "TheFlagen430297#2546\nshade_0x#2874")
-                .addField(`__**Latest update:**__`, "```diff\n-Not updated.```")
+                .addField(`__**Latest update:**__`, "```diff\n-Repaired the bot. \n-The -loot command is now live. \n- Added -Suggest command.```")
                 
                 .setTimestamp()
     

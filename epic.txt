@@ -1,2 +1,15 @@
 Throwable^Smoke Grenade^1^1
 Throwable^Frag Grenade^1^1
+Weapon^Axe^1^1^20^40^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965342581223504/Axe.png
+Weapon^Poison in a Bottle^1^1^https://cdn.discordapp.com/attachments/881965174452535386/881965498265395200/Poison_Bottle.png
+Weapon^Crossbow^1^1^60^80^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965410851905566/Crossbow.png
+Weapon^Bow^1^1^60^80^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965382557106197/Bow.png
+Utility^Pickaxe^1^1^20^40^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965488429760562/Pickaxe.png
+Utility^Shovel^1^1^20^40^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965556343914596/Shovel.png
+Utility^Drill^1^1^25^50^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965429101330502/Drill.png
+Utility^Screwdriver^1^1^20^70^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965544398524416/Screwdriver.png
+Utility^Saw^1^1^20^76^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965519828291634/bruh.png
+Utility^Scissors^1^1^20^70^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965527617130507/Scissors.png
+Utility^Hammer^1^1^20^70^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965455550603334/hammer.png
+Utility^Tent^1^1^20^50^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965562039791646/Tent.png
+Utility^Backpack^1^1^https://cdn.discordapp.com/attachments/881965174452535386/881965352374894662/Backpack.png

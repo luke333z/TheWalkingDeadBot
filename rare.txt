@@ -1,13 +1,17 @@
-Weapon^Dagger^1^1^50^75^Durability
-Weapon^Knife^1^1^50^80^Durability
-Provision^Bar of Chocolate^1^2^25^76^Quality
-Medicine^Bottle of Chlorine Tablets^1^2
-Medicine^Bottle of Pain Killers^1^1
-Medicine^Bottle of Antibiotics^1^1
-Medicine^Bandage^1^1
-Utility^Rope^1^1
-Utility^Lamp^1^1
+Weapon^Dagger^1^1^50^75^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965422423986276/Dagger.png
+Weapon^Knife^1^1^50^80^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965320921833492/Knife.png
+Weapon^Slingshot^1^1^45^60^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965298314543154/Slingshot.png
+Ammo^Arrows^3^7^45^90^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965332774944798/Arrows.png
+Ammo^Screws and Nails^5^7^https://cdn.discordapp.com/attachments/881965174452535386/881965550106984468/Screws_and_nails.png
+Provision^Bar of Chocolate^1^2^25^76^Quality^https://cdn.discordapp.com/attachments/881965174452535386/881967040339001364/Chocolate.png
+Medicine^Bottle of Chlorine Tablets^1^2^https://cdn.discordapp.com/attachments/881965174452535386/881968022330433546/Pills1.png
+Medicine^Bottle of Pain Killers^1^1^https://cdn.discordapp.com/attachments/881965174452535386/881968023953625088/Pills2.png
+Medicine^Bottle of Antibiotics^1^1^https://cdn.discordapp.com/attachments/881965174452535386/881968022330433546/Pills1.png
+Medicine^Bandage^1^1^https://cdn.discordapp.com/attachments/881965174452535386/881965362420256838/Bandage.png
+Utility^Rope^1^1^https://cdn.discordapp.com/attachments/881965174452535386/881965282111918121/Rope.png
+Utility^Lamp^1^1^https://cdn.discordapp.com/attachments/881965174452535386/881968653099237397/Lamp.png
 Utility^Batteries^1^3^10^76^Quality
 Utility^Torch^1^1^20^50^Durability
-Utility^Tent^1^1^20^70^Durability
+Utility^Tent^1^1^20^70^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965562039791646/Tent.png
 Utility^Fuel Canister^1^1
+Utility^Leather Gloves^1^1^60^80^Durability^https://cdn.discordapp.com/attachments/881965174452535386/881965462928375898/Leather_Gloves.png
