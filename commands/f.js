@@ -11,7 +11,7 @@ module.exports = {
         .setColor("#FFD700")
         .setDescription(`${message.author.username}` + ` has paid their respects.`)
         .setTimestamp()
-        .setFooter(process.env.DEVELOPER)
+        .setFooter("Thank you <3")
 
         message.channel.send(fEmbed);
         } else {
@@ -19,7 +19,7 @@ module.exports = {
             .setColor("#FFD700")
             .setDescription(`${message.author.username}` + ` has paid their respects for **${reason}**.`)
             .setTimestamp()
-            .setFooter(process.env.DEVELOPER)
+            .setFooter("Thank you <3")
             message.channel.send(fEmbed);
         }
     }
