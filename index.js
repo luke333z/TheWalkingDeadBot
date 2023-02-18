@@ -1,11 +1,13 @@
+// CODE NOT COMPATIBLE WITH NEWEST VERSION OF DISCORD.JS 
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
 require('dotenv').config()
 
-client.login("NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g");
-//process.env.token
-//"NzQ4MTA1NjY1MzAxNzA4ODgz.X0YlsQ.s8x-PBlCqQV5tyNOBpNaKMtjt_g"
+client.login(process.env.token);
+
+
 
 const fs = require('fs');
 const { executionAsyncId } = require('async_hooks');
@@ -44,7 +46,7 @@ client.on('message', message =>{
 
 
 });
-/*client.on('message', message =>{
+client.on('message', message =>{
     
     if (message.author.bot) return  ;
     const prefix = '-';
@@ -517,7 +519,7 @@ client.on('message',  message =>{
         message.channel.send(edi)
     }
 
-});*/
+});
 
 
 
