@@ -2,12 +2,10 @@
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const db = require('quick.db');
+
 require('dotenv').config()
 
 client.login(process.env.token);
-
-
 
 const fs = require('fs');
 const { executionAsyncId } = require('async_hooks');
@@ -17,7 +15,6 @@ client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
-
     client.commands.set(command.name, command);
 }
 
@@ -28,8 +25,8 @@ client.once('ready', () => {
     client.user.setUsername("TheWalkingDeadBot")
     client.user.setActivity('Goodbye :(', {type: 'PLAYING'}).catch(console.error);
 });
-
-client.on('message', message =>{
+//bot inactive message
+/*client.on('message', message =>{  
     
     if (message.author.bot) return  ;
     const prefix = '-';
@@ -44,197 +41,18 @@ client.on('message', message =>{
         client.commands.get('f').execute(message, args);
     }
 
+    +
 
-});
+});*/
 client.on('message', message =>{
-    
-    if (message.author.bot) return  ;
     const prefix = '-';
-    if(!message.content.startsWith(prefix)) return;
+    if (message.author.bot || !message.guild || !message.content.startsWith(prefix)) return;
 
     let args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
-    if (!message.guild) return;
-   if(command === 'remember'){
-    const negan = args.slice(0).join(" ");
-    message.delete()
-        if(!negan){
-        message.channel.send(`**${message.author.username}**` + ` will remember that.`)
-        } else {
-            message.channel.send(`**${negan}** will remember that.`);
-        }
-    }
-   
-    if(command === 'loot'){
-        client.commands.get('loot').execute(message, args);
-    }
-    if(command === 'simp'){
-        client.commands.get('simp').execute(message, args);
-    }
-    if(command === 'bonk'){
-        client.commands.get('bonk').execute(message, args);
-    }
-    if(command === 'serverinfo'){
-        client.commands.get('serverinfo').execute(message, args);
-    }
-    
-
-
-if(command === 'botinfo'){
-    client.commands.get('botinfo').execute(message, args, prefix);
-}
-if(command === 'suggest'){
-    client.commands.get('suggest').execute(message, args, prefix);
-}
-    if(command === 'poll'){
-        client.commands.get('poll').execute(message, args);
-    }
-    if(command === 'bingus'){
-        message.channel.send("<:bingus:829475084598509601>")
-    }
-    if(command === 'ping'){
-        client.commands.get('ping').execute(message, args);
-    } 
-    if(command === 'f'){
-        client.commands.get('f').execute(message, args);
-    }
-    if(command === 'kiss'){
-        client.commands.get('kiss').execute(message, args);
-    }
-    if(command === 'hug'){
-        client.commands.get('hug').execute(message, args);
-    }
-    if(command === 'cry'){
-        client.commands.get('cry').execute(message, args);
-    }
-    if(command === 'help'){
-        client.commands.get("help").execute(message, args);
-    }
-    if(command === 'laugh' || command === 'haha'){
-        client.commands.get("laugh").execute(message, args);
-    }
-    if(command === 'walker' || command === 'geek' || command === 'biter'){
-        client.commands.get("walker").execute(message, args);
-    }
-    if(command === 'bite'){
-        client.commands.get("bite").execute(message, args);
-    }
-    if(command === 'avatar'){
-        client.commands.get("avatar").execute(message, args);
-    }
-    if(command === 'insult' || command === 'fyou'){
-        client.commands.get("insult").execute(message, args);
-    }
-    if(command === 'coinflip'){
-        client.commands.get("coinflip").execute(message, args);
-    }
-    if(command === 'kick'){
-        client.commands.get("kick").execute(message, args);
-    }
-    if(command === 'ban'){
-        client.commands.get("ban").execute(message, args);
-    }
-    if(command === 'say'){
-        client.commands.get("say").execute(message, args);
-    }
-    if(command === 'shrug'){
-        client.commands.get("shrug").execute(message, args);
-    }
-    if(command === 'fistbump'){
-        client.commands.get("fistbump").execute(message, args);
-    }
-    if(command === 'userinfo'){
-        client.commands.get("userinfo").execute(message, args);
-    }
-    if(command === 'random'){
-        client.commands.get("random").execute(message, args);
-    }   
-    if(command === 'commands'){
-        client.commands.get("commands").execute(message, args);
-    } 
-    if(command === 'invite'){
-        client.commands.get("invite").execute(message, args);
-    }
-    if(command === 'reply'){
-        message.reply("wtf ke nub")
-    }   
-    if(command === 'rules'){
-        const ruleembed = new Discord.MessageEmbed()
-            .setColor("#0099ff")
-            .setTitle("**Server Rules**")
-            .setDescription("Breaking any of the following rules can result in punishment ranging from warnings all the way to permanent bans from this server.")
-            .setAuthor("The Walking Dead Server", message.guild.iconURL({size: 2048, dynamic: true}))
-            .addFields(
-                { name: "**Rule 1 - Respect Discord's Terms of service**", value: 'That includes and its not limited to: no nsfw, targeted hate or advertising in the server or DMs.' },
-                { name: "**Rule 2 - No randomly pinging staff or members**", value: "That is just annoying and you're evil." },
-                { name: "**Rule 3 - LGBTQ+ friendly and no racism**", value: "This server is LGBTQ+ friendly and supports the BLM movement. If you don't like this, please leave now." },
-                { name: "**Rule 4 - No drama or toxicity**", value: "Try not to spam , and don't go out of your way to attempt to cause other aggravation. Excessive toxicity and drama will result in a ban." },
-                { name: "**Rule 5 - Use the channels for their correct purpose**", value: "Respect the channel topic, for example, don't use bot commands in off topic channels." },
-                { name: "**Rule 6 - Do not post personal information about other members**", value: "Do not post information or pictures of other people without their permission." },
-                { name: "**BONUS RULE - Listen to the staff team**", value: "We are trying to keep this server clean and welcoming , so when we ask you to stop, please do so." },
-                { name: "**Other Guidelines to Respect:**", value: "-No Minimodding\n-Stick to English\n-No Spoilers\n-No Unpingable Nicknames" },
-            )
-            .setFooter("Have Fun!")
-                //message.channel.send(ruleembed)
-    }  
-    
-    if(command === 'rule1'){
-        const ruleembed = new Discord.MessageEmbed()
-            .setColor("#0099ff")
-            .setTitle("**Server Rules**")
-            .setDescription("Nerespectarea regulilor va duce la mute, kick, ban sau derank, precedate de un warn.")
-            .setAuthor("Clubul lui Mickey Mouse", message.guild.iconURL({size: 2048, dynamic: true}))
-            .addFields(
-                { name: "**Regula 1 - Nu dați ping inutil**", value: 'Dacă totuși dați ping unui rol/persoane, nu o faceți de mai multe ori. O dată este suficient.' },
-                { name: "**Regula 2 - Nu spamați**", value: "Nimeni nu suportă spam-ul. Dacă nu aveți ce face, există canal special pentru spam." },
-                { name: "**Regula 3 - Nu fiți toxici**", value: "Încercați să nu intrați în discuții inutile și să nu insultați celelalte persoane de pe server." },
-                { name: "**Regula 4 - Nu se va vorbi despre anumite subiecte**", value: "Dat fiind faptul că nu toți sunt supporteri ai comunității LGBTQIA+, mișcării BLM sau sunt misogini, nu vom vorbi despre aceste teme, fiindcă avem păreri diferite și s-ar putea isca o ceartă. Această regulă include interzicerea folosirii cuvântului 'gay' sau al oricărui slur ca pe o insultă." },
-                { name: "**Regula 5 - Nu vă puneți toate rolurile**", value: "Rolurile sunt create cu un anumit scop, iar dacă nu vă încadrați în acea categorie, nu vă puneți rolul respectiv." },
-                { name: "**Regula 6 - Nu abuzați de rol**", value: "Este interzis să dați kick/ban unei persoane din server fără niciun motiv." },
-                { name: "**Regula 7 - Fără NSFW**", value: "Content-ul NSFW nu este acceptat pe acest server. Dacă ești disperat/ă, poți căuta pe internet (deși nu îți recomand)." },
-                { name: "**Regula 8 - Cine este nu activ va primi kick**", value: "Tzeaka cpsz" },
-                { name: "**Regula 9 - Folosiți canalele în mod corespunzător **", value: "Nu trimiteți, de exemplu, teme pe canalul de poze." },
-            )
-            .setFooter("Have Fun!")
-               // message.channel.send(ruleembed)
-    }  
-    if(command=== 'calculate' || command === "cal"){
-        client.commands.get("calculate").execute(client, message, args);
-    }
-    if(command === 'rcreate'){
-        if(message.author.id != "332867444505051137") return message.channel.send("Noob")
-        else{
-            message.guild.roles.create({ data: { name: args[0], color: args[1] } });
-            message.channel.send("Role Created")
-            }
-    }
-    if(command === 'radd'){
-        if(message.author.id != "332867444505051137") return;
-        else{
-            const user = message.guild.member(message.mentions.users.first());
-            const gibRole = message.guild.roles.cache.find(r => r.name === `${args[0]}`)
-            user.roles.add(gibRole)
-            message.channel.send("Role Added")
-            }
-    }
-   
-if(command === 'stop'){
-    if(message.author.id != "332867444505051137") return message.channel.send("Noob")
-    else{
-    client.stop()
-    }
-}
-
-
-
-
-
-
-    
-
-    
+    client.commands.get(command).execute(message, args);   
 });
-client.on('message',  message =>{
+client.on('message',  message =>{//server specific commands, not bothered to clean
     
     if (message.author.bot) return  ;
     const prefix = '-';
@@ -456,7 +274,7 @@ if(command === 'templates'){
 
 
 
-client.on('message',  message =>{
+client.on('message',  message =>{//server specific comands, not bothered to clean
     
     
     

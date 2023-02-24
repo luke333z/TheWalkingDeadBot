@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
     name: 'commands',
-    description: "Commands",
+    description: "Commands info",
     execute(message, args){
        
         const command = "`f`, `coinflip`, `say`, `shrug`, `ping`, `simp`, `bonk`, `remember`, `bingus`, `ban`, `kick`, `kiss`, `hug`, `cry`, `laugh`, `walker`, `bite`, `insult`, `fistbump`, `avatar`, `userinfo`, `serverinfo`, `poll`, `botinfo`, `commands`, `invite`, `suggest`"

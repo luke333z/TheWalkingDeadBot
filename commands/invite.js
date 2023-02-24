@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
     name: 'invite',
-    description: "invite.",
+    description: "Sends bot invite link.",
     execute(message, args){
         const negan = args.slice(0).join(" ");
     

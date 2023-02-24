@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
     name: 'fistbump',
-    description: "fistbump",
+    description: "TWD fistbump gifs",
     execute(message, args){
         function getRandomInt(min, max) {
             min = Math.ceil(min);

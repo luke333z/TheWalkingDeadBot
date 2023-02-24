@@ -11,19 +11,19 @@ module.exports = {
         let color
 
         if ( rarity < 50){ // 0 -> 49 50%
-             file = `./common.txt`
+             file = `./loot/common.txt`
              color = "#808080"
              rarity1 = "Common Loot"
         } else if (rarity < 85){  // 50 -> 84 35%
-             file = `./rare.txt`
+             file = `./loot/rare.txt`
              color = "#000399"
              rarity1 = "Rare Loot"
         } else if (rarity < 98){ // 85 -> 98 14% 
-             file = `./epic.txt`
+             file = `./loot/epic.txt`
              color = "#5e0099"
              rarity1 = "Epic Loot"
         }else {// 1%
-             file = `./legendary.txt`
+             file = `./loot/legendary.txt`
              color = "#def200"
              rarity1 = "Legendary Loot"
         }
